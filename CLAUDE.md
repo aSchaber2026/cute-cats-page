@@ -102,30 +102,41 @@ Der Ordner `_Temp/` dient als Eingangskorb:
 
 ### GmbH — Horst Keller Gebäudereinigung
 - **Geschäftszahlen 2025:** 489k Einnahmen, 67k Gewinn
-- **Betriebsrente Horst:** 1.303 €/Monat seit 2003, Horst ist 86
+- **Betriebsrente Horst:** 1.303 €/Monat seit 2003, Horst ist 86 — einzige GmbH-Belastung (15.636 €/Jahr)
+- **150k-Darlehen:** Läuft auf Horst PERSÖNLICH (1.247,37 €/Monat, Restschuld ~65.700 €, Ende 30.08.2033) — belastet GmbH NICHT
+- **Gesellschafterdarlehen ~500k:** Horst hat sich ~2003 ca. 500k aus der GmbH entnommen, 2019 auf 144k gesunken (363k Differenz ungeklärt)
 - **Pensionsrückstellung:** War gebucht (182.246 € per 2010), Witwenrente = 2/3 davon → Christiane kann darauf verzichten
-- **Bundesanzeiger 2006–2019:** Alle 14 Jahresabschlüsse analysiert, ab 2020 fehlen Veröffentlichungen (Pflichtverstoß)
+- **Bundesanzeiger 2006–2019:** Alle 14 Jahresabschlüsse analysiert + als Volltext in bundesanzeiger_analyse.html, ab 2020 fehlen Veröffentlichungen (Pflichtverstoß)
 - **Crash 2019:** Bilanzsumme halbiert, 363k Forderung gg. Gesellschafter verschwunden, 302k Gewinnvortrag weg — fällt in Mary-Lous Buchhaltungszeit
-- **Strategische Optionen:** GF-Eintragung, Asset Deal, Rechtsform-Empfehlung GmbH dokumentiert
+- **Fazit: GmbH behalten** — Christiane als GF eintragen, Altlasten tragbar und zeitlich begrenzt, Neugründung unnötig
+
+## Bekannte Probleme / Wichtige Hinweise
+
+- **NIEMALS E-Mails an Regh von andreas@schaber.email versenden!** Kommunikation mit Regh läuft ausschließlich über info@horst-keller-gmbh.de (Christiane). Andreas' Account darf nicht verwendet werden.
+- **SEPA-Lastschriftmandat:** Original wurde am 28.03.2026 per Post versendet (KEIN Einschreiben, KEINE Kopie behalten). Falls Regh behauptet es nicht erhalten zu haben, muss sie ein neues Formular schicken, das dann per Einschreiben mit Rückschein zurückgesendet wird.
+- E-Mails für Christiane per AppleScript erstellen (NICHT per .eml) — aber Absender muss info@horst-keller-gmbh.de sein, nicht andreas@schaber.email
 
 ## Offene Aufgaben / TODOs (Stand: 2026-04-03)
 
-- [ ] **Kapitel-Navigation in tagebuch.html und gmbh.html einbauen** (Inhaltsverzeichnis mit Sprungmarken, bei Print trotzdem alles anzeigen)
-- [ ] Antwort auf Reghs Mail vom 03.04. (Lastschrift) versenden — Entwurf liegt im Tagebuch
-- [ ] Prüfen ob SEPA-Lastschriftmandat bei Regh angekommen ist
+- [x] ~~Kapitel-Navigation in tagebuch.html und gmbh.html~~ — erledigt (Sidebar, Scroll-Spy, Hamburger, Print-kompatibel)
+- [x] ~~Bundesanzeiger-PDFs als Volltext in HTML~~ — erledigt, PDFs aus Repo entfernt
+- [x] ~~Fazit "GmbH behalten" ins Dokument~~ — erledigt
+- [x] ~~Darlehensrate korrigiert auf 1.247,37 €~~ — erledigt
+- [ ] **Antwort an Regh (Lastschrift):** Text liegt in der Zwischenablage / Tagebuch. CHRISTIANE muss die Mail von info@horst-keller-gmbh.de senden. Neues SEPA-Formular anfordern, diesmal per Einschreiben zurücksenden.
 - [ ] Aufklärung Vermögensabfluss 2018/2019: Wohin sind ~363.000 € geflossen?
 - [ ] PSVaG-Mitgliedschaft prüfen (direkt beim PSVaG anfragen)
 - [ ] Fehlende Jahresabschlüsse 2020–2025 beim Bundesanzeiger nachreichen
 - [ ] Rolle von Mary-Lou in der Buchhaltung 2017–2023 prüfen lassen
 - [ ] Schadensersatz gegen KNP prüfen (Fachanwalt)
 - [ ] GF-Eintragung Christiane mit Notar/Steuerberater besprechen
+- [ ] Christiane: Verzicht auf Witwenrente vereinbaren (Steuerberater/Notar)
+- [ ] Neuer Zinssatz 150k-Darlehen klären (Zinsbindung seit 30.01.2025 abgelaufen)
 - [ ] Gas-Bestellung: Monitoring ob Regh bestellt oder nicht
 
 ### Nächste Session — Hier weitermachen
-1. **Kapitel-Navigation** in tagebuch.html und gmbh.html einbauen (Inhaltsverzeichnis, Sprungmarken, Print-kompatibel)
-2. Antwort-Mail an Regh (Lastschrift) versenden lassen
-3. Prüfen ob neue E-Mails von Regh im _Temp-Ordner liegen
-4. GmbH: Strategische Entscheidung (alte GmbH behalten vs. neue gründen) mit Christiane besprechen
+1. **Antwort an Regh (Lastschrift)** — Christiane muss von info@horst-keller-gmbh.de antworten. Text: Original wurde Ende März versendet, neues Formular anfordern, per Einschreiben zurücksenden.
+2. Prüfen ob neue E-Mails von Regh im _Temp-Ordner liegen
+3. GmbH: Nächste Schritte mit Christiane besprechen (GF-Eintragung, Witwenrenten-Verzicht, Steuerberater-Termin für Crash-2019-Aufklärung)
 
 ## Wichtig
 

@@ -25,3 +25,16 @@
 - Portal-Seite mit Auswahl GbR / GmbH
 - Repo: aSchaber2026/cute-cats-page (öffentlich, Passwortschutz)
 - E-Mail an Christiane Keller versendet (Link + Hinweis auf Pfote)
+
+### Spätere Ergänzungen am selben Tag
+- Kapitel-Navigation mit Scroll-Spy in tagebuch.html und gmbh.html eingebaut
+- Bundesanzeiger-Analyse als eigenständige Druckversion (bundesanzeiger_analyse.html)
+- 14 Bundesanzeiger-PDFs als Volltext in die HTML überführt, PDFs aus Repo entfernt
+- Gesellschafterdarlehen ~500k erklärt (was "Forderung gg. Gesellschafter" bedeutet)
+- 150k-Darlehen dokumentiert (Horst persönlich, 1.247,37 €/Monat, Restschuld ~65.700 €, Ende 30.08.2033)
+- Korrektur: 150k-Darlehen ist Horsts private Belastung, nicht der GmbH
+- Monatliche GmbH-Belastung: nur 1.303 € Betriebsrente, verbleiben ~51.700 €/Jahr
+- Fazit "GmbH behalten" mit 8 Argumenten und Maßnahmenplan ins Dokument aufgenommen
+- Portal um Bundesanzeiger-Analyse als dritten Bereich erweitert
+- WICHTIG: Mails an Regh dürfen NIE von andreas@schaber.email gesendet werden — nur über info@horst-keller-gmbh.de (Christiane)
+- SEPA-Lastschriftmandat: Original versendet am 28.03., KEINE Kopie, KEIN Einschreiben
