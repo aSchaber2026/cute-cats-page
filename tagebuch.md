@@ -224,7 +224,7 @@
 - Zum Säumniszuschlag: War unklaren Abbuchungen geschuldet. Stellt klar: Kellers private Vermietungsumsätze (Steuernummer 042/082/32685) dürfen nicht mehr vom Hallenkonto (042/082/31676) abgebucht werden. Lastschriftgenehmigung wird persönlich vorbeigebracht. Frage nach Flüssiggasbestellung wurde ignoriert — betrachtet erneute Bestellung als hinfällig.
 
 **27.03.2026** — GmbH → Regh
-- Bestätigt: USt-Angelegenheit geklärt. Nimmt zur Kenntnis, dass private Vermietungsumsätze nicht mehr über Hallenkonto laufen. Kein Einwand gegen Gasbestellung. SEPA-Lastschriftmandat wird zeitnah zugesandt.
+- Bestätigt: USt-Angelegenheit geklärt. Nimmt zur Kenntnis, dass private Vermietungsumsätze nicht mehr über Hallenkonto laufen. Kein Einwand gegen Gasbestellung — ordnungsgemäße Versorgung der Mieter muss sichergestellt werden: *„Von unserer Seite aus besteht selbstverständlich kein Einwand gegen die Bestellung von neuem Gas, da es in unserem Interesse liegt, eine ordnungsgemäße Versorgung der Mieter jederzeit sicherzustellen."* SEPA-Lastschriftmandat wird zeitnah zugesandt.
 
 **30.03.2026** — GmbH → Regh / Regh → GmbH / Regh → Sparkasse
 - **GmbH:** Vollstreckungsankündigung FA Trier mit Säumniszuschlägen. Fragt: Warum ist KNP nicht tätig geworden? Künftige Post soll direkt an Reghs Adresse (Auf der Geig 8) umgeleitet werden.
