@@ -69,6 +69,7 @@
     border-bottom: 2px solid #bdc3c7;
     padding-bottom: 6px;
     font-size: 1.3em;
+    scroll-margin-top: 24px;
   }
   h3 {
     color: #34495e;
@@ -217,11 +218,110 @@
     th, td { padding: 8px 10px; }
   }
 
+  /* === Chapter Navigation (TOC) === */
+  .toc-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 100vh;
+    background: #fff;
+    border-right: 1px solid #ddd;
+    box-shadow: 2px 0 12px rgba(0,0,0,0.06);
+    overflow-y: auto;
+    z-index: 1000;
+    padding: 18px 0 24px 0;
+    scrollbar-width: thin;
+  }
+  .toc-wrapper::-webkit-scrollbar { width: 5px; }
+  .toc-wrapper::-webkit-scrollbar-thumb { background: #ccc; border-radius: 3px; }
+  .toc-title {
+    font-size: 0.82em;
+    font-weight: 700;
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0 18px 10px 18px;
+    border-bottom: 2px solid #2c3e50;
+    margin-bottom: 6px;
+  }
+  .toc-wrapper a {
+    display: block;
+    padding: 7px 18px;
+    color: #555;
+    text-decoration: none;
+    font-size: 0.82em;
+    line-height: 1.35;
+    border-left: 3px solid transparent;
+    transition: all 0.15s;
+  }
+  .toc-wrapper a:hover {
+    color: #2c3e50;
+    background: #f0f2f5;
+  }
+  .toc-wrapper a.toc-active {
+    color: #2c3e50;
+    font-weight: 700;
+    border-left-color: #2c3e50;
+    background: #eef2f7;
+  }
+
+  /* Push body content to make room for sidebar */
+  body {
+    margin-left: 280px;
+  }
+
+  /* Hamburger button — hidden on desktop */
+  .toc-hamburger {
+    display: none;
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    z-index: 1100;
+    background: #2c3e50;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    width: 44px;
+    height: 44px;
+    font-size: 1.4em;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    line-height: 1;
+  }
+  .toc-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.3);
+    z-index: 900;
+  }
+  .toc-overlay.active { display: block; }
+
+  /* Mobile: sidebar becomes slide-in drawer */
+  @media (max-width: 960px) {
+    body { margin-left: 0; }
+    .toc-wrapper {
+      transform: translateX(-100%);
+      transition: transform 0.25s ease;
+    }
+    .toc-wrapper.open {
+      transform: translateX(0);
+    }
+    .toc-hamburger {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
   /* === Print === */
   @media print {
+    .toc-wrapper, .toc-hamburger, .toc-overlay { display: none !important; }
     body {
       background: #fff;
       margin: 0;
+      margin-left: 0;
       padding: 10px;
       font-size: 11pt;
       color: #1a1a1a;
@@ -288,6 +388,32 @@
   <a href="portal.html">&#8592; Zurück zum Portal</a>
 </div>
 
+<!-- Hamburger Button (mobile) -->
+<button class="toc-hamburger" id="tocHamburger" aria-label="Inhaltsverzeichnis">&#9776;</button>
+<div class="toc-overlay" id="tocOverlay"></div>
+
+<!-- Chapter Navigation (TOC) -->
+<nav class="toc-wrapper" id="tocNav">
+  <div class="toc-title">Inhaltsverzeichnis</div>
+  <a href="#kap-eckdaten">Eckdaten</a>
+  <a href="#kap-ausgangssituation">1. Ausgangssituation</a>
+  <a href="#kap-pensionsrueckstellung">2. Pensionsrückstellung</a>
+  <a href="#kap-werte-gutachten">3. Werte laut Gutachten</a>
+  <a href="#kap-ehefrau">4. Ehefrau 25 Jahre jünger</a>
+  <a href="#kap-werte-2025">5. Geschätzte Werte 2025</a>
+  <a href="#kap-steuer">6. Steuerliche Auswirkungen</a>
+  <a href="#kap-szenarien">7. Szenarien für die Zukunft</a>
+  <a href="#kap-bewertung">8. Unternehmensbewertung</a>
+  <a href="#kap-psvag">9. PSVaG</a>
+  <a href="#kap-geschaeftsfuehrung">10. Geschäftsführung</a>
+  <a href="#kap-schadensersatz">11. Schadensersatz KNP</a>
+  <a href="#kap-naechste-schritte">12. Nächste Schritte</a>
+  <a href="#kap-exkurs-gf">Exkurs: Geschäftsführerin</a>
+  <a href="#kap-asset-deal">Asset Deal</a>
+  <a href="#kap-rechtsform">Rechtsform neue Firma</a>
+  <a href="#kap-bundesanzeiger">Bundesanzeiger-Analyse</a>
+</nav>
+
 <!-- Header -->
 <div class="page-header">
   <h1>Analyse: Pensionsrückstellung &amp; Unternehmensbewertung</h1>
@@ -296,7 +422,7 @@
 
 <!-- Eckdaten -->
 <div class="card">
-  <h2>Eckdaten</h2>
+  <h2 id="kap-eckdaten">Eckdaten</h2>
   <dl class="info-grid">
     <dt>Firma</dt><dd>Horst Keller Gebäudereinigung GmbH, Trierweiler</dd>
     <dt>Versorgungsberechtigter</dt><dd>Horst Keller, geb. 07.09.1940 (aktuell 85 Jahre)</dd>
@@ -309,7 +435,7 @@
 
 <!-- ============================================================ -->
 <div class="card">
-<h2>1. Ausgangssituation</h2>
+<h2 id="kap-ausgangssituation">1. Ausgangssituation</h2>
 
 <p>Herr Horst Keller erhält seit Dezember 2003 eine lebenslange betriebliche Altersrente in Höhe von <strong>1.303,80 EUR monatlich</strong> (15.645,60 EUR/Jahr). Die Auszahlung erfolgt über die Lohnabrechnung.</p>
 
@@ -322,7 +448,7 @@
 
 <!-- ============================================================ -->
 <div class="card">
-<h2>2. Was ist eine Pensionsrückstellung?</h2>
+<h2 id="kap-pensionsrueckstellung">2. Was ist eine Pensionsrückstellung?</h2>
 
 <p>Die Pensionsrückstellung bildet den <strong>Barwert aller zukünftigen Rentenzahlungen</strong> ab – also alles, was die GmbH ab heute bis zum Lebensende von Herrn Keller und danach an seine Witwe noch zahlen muss.</p>
 
@@ -339,7 +465,7 @@
 
 <!-- ============================================================ -->
 <div class="card">
-<h2>3. Werte laut Gutachten (Stand 31.12.2022)</h2>
+<h2 id="kap-werte-gutachten">3. Werte laut Gutachten (Stand 31.12.2022)</h2>
 
 <table>
   <tr><th>Bewertung</th><th>Zinssatz</th><th>Betrag</th></tr>
@@ -353,7 +479,7 @@
 
 <!-- ============================================================ -->
 <div class="card">
-<h2>4. Besonderheit: Ehefrau 25 Jahre jünger</h2>
+<h2 id="kap-ehefrau">4. Besonderheit: Ehefrau 25 Jahre jünger</h2>
 
 <div class="highlight-box">
   <strong>Dieser Umstand ist finanziell entscheidend.</strong> Die Ehefrau ist Jahrgang ca. 1965 und damit erst ca. 60 Jahre alt. Die Witwenrente könnte 25–30 Jahre lang gezahlt werden müssen.
@@ -373,7 +499,7 @@
 <!-- ============================================================ -->
 <div class="page-break"></div>
 <div class="card">
-<h2>5. Geschätzte Werte Stand 31.12.2025</h2>
+<h2 id="kap-werte-2025">5. Geschätzte Werte Stand 31.12.2025</h2>
 
 <p>Auf Basis des Gutachtens 2022, fortgeschrieben um 3 Jahre (Herr Keller dann 85 Jahre, Ehefrau ~60 Jahre). Berücksichtigt: höheres Alter, veränderte Handelsbilanz-Zinssätze, Witwenkomponente.</p>
 
@@ -391,7 +517,7 @@
 
 <!-- ============================================================ -->
 <div class="card">
-<h2>6. Steuerliche Auswirkungen</h2>
+<h2 id="kap-steuer">6. Steuerliche Auswirkungen</h2>
 
 <h3>Wenn die Rückstellung nie gebucht wurde</h3>
 <p>Die Rückstellung mindert als Aufwand den Gewinn und damit die Steuerlast. Wurde sie nie gebucht, hat die GmbH über die Jahre <strong>zu viel Steuern gezahlt</strong> – zusätzlich zu den laufenden Rentenzahlungen, die bereits als Betriebsausgabe gebucht wurden.</p>
@@ -404,7 +530,7 @@
 
 <!-- ============================================================ -->
 <div class="card">
-<h2>7. Szenarien für die Zukunft</h2>
+<h2 id="kap-szenarien">7. Szenarien für die Zukunft</h2>
 
 <h3>Szenario A: GmbH läuft weiter (1–2 Jahre), dann Abwicklung</h3>
 
@@ -466,7 +592,7 @@
 <!-- ============================================================ -->
 <div class="page-break"></div>
 <div class="card">
-<h2>8. Unternehmensbewertung – Verkauf der GmbH</h2>
+<h2 id="kap-bewertung">8. Unternehmensbewertung – Verkauf der GmbH</h2>
 
 <p>Sollte ein Verkauf in Betracht kommen, ist die Ermittlung des Firmenwertes entscheidend. Bei einer Gebäudereinigung gibt es mehrere gängige Bewertungsmethoden:</p>
 
@@ -560,7 +686,7 @@
 
 <!-- ============================================================ -->
 <div class="card">
-<h2>9. PSVaG – Pensions-Sicherungs-Verein</h2>
+<h2 id="kap-psvag">9. PSVaG – Pensions-Sicherungs-Verein</h2>
 
 <p>Jede GmbH mit Pensionszusage <strong>muss</strong> Mitglied im PSVaG sein. Die Beiträge (ca. 2–4 Promille der Rückstellung, also ca. 300–600 EUR/Jahr) werden normalerweise über den Steuerberater gemeldet und abgeführt.</p>
 
@@ -582,7 +708,7 @@
 <!-- ============================================================ -->
 <div class="page-break"></div>
 <div class="card">
-<h2>10. Absicherung der Unternehmensführung – Handlungsbedarf Geschäftsführung</h2>
+<h2 id="kap-geschaeftsfuehrung">10. Absicherung der Unternehmensführung – Handlungsbedarf Geschäftsführung</h2>
 
 <p>Aktuell ist Herr Horst Keller als alleiniger Geschäftsführer der GmbH im Handelsregister eingetragen. Seine Ehefrau führt den operativen Betrieb faktisch eigenständig und hat den Geschäftsbetrieb in den letzten zwei Jahren erfolgreich stabilisiert. Es besteht eine notarielle Generalvollmacht.</p>
 
@@ -664,7 +790,7 @@
 
 <!-- ============================================================ -->
 <div class="card">
-<h2>11. Möglicher Schadensersatz gegen die KNP</h2>
+<h2 id="kap-schadensersatz">11. Möglicher Schadensersatz gegen die KNP</h2>
 
 <p>Falls sich herausstellt, dass die KNP:</p>
 <ul>
@@ -679,7 +805,7 @@
 
 <!-- ============================================================ -->
 <div class="card">
-<h2>12. Empfohlene nächste Schritte</h2>
+<h2 id="kap-naechste-schritte">12. Empfohlene nächste Schritte</h2>
 
 <table>
   <tr><th>Nr.</th><th>Maßnahme</th><th>Priorität</th></tr>
@@ -699,7 +825,7 @@
 
 <!-- ============================================================ -->
 <div class="card">
-<h2>Exkurs: Geschäftsführerin — Rechte, Pflichten und Haftung</h2>
+<h2 id="kap-exkurs-gf">Exkurs: Geschäftsführerin — Rechte, Pflichten und Haftung</h2>
 
 <p><em>Stand: 03.04.2026 — Hintergrund: Christiane Keller führt die GmbH faktisch seit ca. 2 Jahren. Horst Keller ist alleiniger Gesellschafter und alleiniger Geschäftsführer, jedoch gesundheitlich eingeschränkt und wiederholt im Krankenhaus. Christiane handelt derzeit auf Basis einer Vollmacht.</em></p>
 
@@ -766,7 +892,7 @@
 
 <!-- ============================================================ -->
 <div class="card">
-<h2>Strategische Option: Asset Deal — Neustart ohne Altlasten</h2>
+<h2 id="kap-asset-deal">Strategische Option: Asset Deal — Neustart ohne Altlasten</h2>
 
 <p><em>Stand: 03.04.2026 — Szenario: Christiane Keller gründet eine neue Firma und kauft der GmbH die betriebsnotwendigen Vermögenswerte ab. Die alte GmbH wird anschließend geordnet abgewickelt.</em></p>
 
@@ -856,7 +982,7 @@
 <!-- ============================================================ -->
 
 <div class="card">
-<h2>Rechtsform für die neue Firma: Empfehlung GmbH</h2>
+<h2 id="kap-rechtsform">Rechtsform für die neue Firma: Empfehlung GmbH</h2>
 
 <p><em>Stand: 03.04.2026 — Welche Rechtsform ist für Christianes Neustart am besten geeignet?</em></p>
 
@@ -954,7 +1080,7 @@
 <!-- ============================================================ -->
 
 <div class="card">
-<h2>Bundesanzeiger-Analyse: Jahresabschlüsse 2006–2019</h2>
+<h2 id="kap-bundesanzeiger">Bundesanzeiger-Analyse: Jahresabschlüsse 2006–2019</h2>
 
 <p><em>Stand: 03.04.2026 — Auswertung aller 14 veröffentlichten Jahresabschlüsse der Horst Keller Gebäudereinigung GmbH aus dem Bundesanzeiger. Quelle: www.bundesanzeiger.de</em></p>
 
@@ -1126,5 +1252,71 @@
   <p>Analyse erstellt am 27.03.2026 — Bundesanzeiger-Auswertung ergänzt am 03.04.2026</p>
 </div>
 
+<script>
+(function() {
+  var tocNav = document.getElementById('tocNav');
+  var hamburger = document.getElementById('tocHamburger');
+  var overlay = document.getElementById('tocOverlay');
+  var tocLinks = tocNav.querySelectorAll('a[href^="#"]');
+  var sections = [];
+
+  // Collect section elements
+  tocLinks.forEach(function(link) {
+    var id = link.getAttribute('href').substring(1);
+    var el = document.getElementById(id);
+    if (el) sections.push({ id: id, el: el, link: link });
+  });
+
+  // Scroll spy
+  function updateActive() {
+    var scrollY = window.scrollY || window.pageYOffset;
+    var current = null;
+    for (var i = sections.length - 1; i >= 0; i--) {
+      if (sections[i].el.getBoundingClientRect().top <= 120) {
+        current = sections[i];
+        break;
+      }
+    }
+    tocLinks.forEach(function(l) { l.classList.remove('toc-active'); });
+    if (current) {
+      current.link.classList.add('toc-active');
+      // Scroll the TOC nav so active link is visible
+      var navRect = tocNav.getBoundingClientRect();
+      var linkRect = current.link.getBoundingClientRect();
+      if (linkRect.top < navRect.top + 50 || linkRect.bottom > navRect.bottom - 20) {
+        current.link.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+      }
+    }
+  }
+
+  window.addEventListener('scroll', updateActive, { passive: true });
+  updateActive();
+
+  // Smooth scroll on click
+  tocLinks.forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      var id = this.getAttribute('href').substring(1);
+      var target = document.getElementById(id);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // Close mobile menu
+        tocNav.classList.remove('open');
+        overlay.classList.remove('active');
+      }
+    });
+  });
+
+  // Hamburger toggle
+  hamburger.addEventListener('click', function() {
+    tocNav.classList.toggle('open');
+    overlay.classList.toggle('active');
+  });
+  overlay.addEventListener('click', function() {
+    tocNav.classList.remove('open');
+    overlay.classList.remove('active');
+  });
+})();
+</script>
 </body>
 </html>
