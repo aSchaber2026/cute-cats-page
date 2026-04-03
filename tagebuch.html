@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Keller / Regh GbR — E-Mail-Dokumentation</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; max-width: 920px; margin: 40px auto; padding: 20px; color: #333; line-height: 1.7; background: #f0f2f5; }
+  h1 { color: #2c3e50; border-bottom: 3px solid #2c3e50; padding-bottom: 10px; }
+  h2 { color: #34495e; margin-top: 36px; border-bottom: 1px solid #bdc3c7; padding-bottom: 6px; }
+  h3 { color: #7f8c8d; margin-top: 24px; }
+  .card { background: #fff; border-radius: 10px; padding: 24px 28px; margin: 16px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .info-grid { display: grid; grid-template-columns: 180px 1fr; gap: 6px 16px; }
+  .info-grid dt { font-weight: 600; color: #34495e; }
+  .info-grid dd { margin: 0; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 0.85em; font-weight: 600; }
+  .badge-blue { background: #d6eaf8; color: #1a5276; }
+  .badge-red { background: #f8d7da; color: #721c24; }
+  .badge-green { background: #d4edda; color: #155724; }
+  .badge-yellow { background: #fff3cd; color: #664d03; }
+  .badge-gray { background: #e9ecef; color: #495057; }
+
+  /* E-Mail-Darstellung */
+  .email { background: #fff; border-radius: 8px; padding: 20px 24px; margin: 12px 0; box-shadow: 0 1px 4px rgba(0,0,0,0.06); border-left: 4px solid #bdc3c7; }
+  .email.empfangen { border-left-color: #e74c3c; }
+  .email.gesendet { border-left-color: #2980b9; }
+  .email-header { display: grid; grid-template-columns: 80px 1fr; gap: 2px 12px; font-size: 0.92em; margin-bottom: 10px; }
+  .email-header .label { font-weight: 600; color: #7f8c8d; }
+  .email-header .value { color: #2c3e50; }
+  .email-date { font-weight: 700; font-size: 0.95em; color: #2c3e50; margin-bottom: 6px; }
+  .email-direction { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.8em; font-weight: 700; margin-left: 8px; }
+  .dir-in { background: #fdecea; color: #c0392b; }
+  .dir-out { background: #d6eaf8; color: #2471a3; }
+  .email-body { margin-top: 10px; padding: 12px 16px; background: #fafafa; border-radius: 6px; font-size: 0.93em; white-space: pre-wrap; word-wrap: break-word; line-height: 1.6; }
+  .email-attachments { margin-top: 8px; font-size: 0.88em; color: #7f8c8d; }
+  .email-attachments span { background: #ecf0f1; padding: 2px 8px; border-radius: 4px; margin-right: 4px; display: inline-block; margin-bottom: 4px; }
+  .zitat { background: #fff3cd; border-left: 3px solid #f39c12; padding: 8px 14px; margin: 8px 0; font-style: italic; font-size: 0.93em; }
+  .tonfall { font-size: 0.85em; margin-top: 6px; }
+
+  .warn { background: #fff3cd; border-left: 4px solid #ffc107; padding: 12px 16px; margin: 12px 0; border-radius: 4px; }
+  .danger { background: #f8d7da; border-left: 4px solid #dc3545; padding: 12px 16px; margin: 12px 0; border-radius: 4px; }
+  .info { background: #d1ecf1; border-left: 4px solid #17a2b8; padding: 12px 16px; margin: 12px 0; border-radius: 4px; }
+  .success { background: #d4edda; border-left: 4px solid #28a745; padding: 12px 16px; margin: 12px 0; border-radius: 4px; }
+
+  .month-header { background: #2c3e50; color: #fff; padding: 10px 20px; border-radius: 6px; margin: 28px 0 12px 0; font-size: 1.1em; font-weight: 700; }
+
+  .toc { background: #fff; border-radius: 8px; padding: 16px 24px; margin: 16px 0; }
+  .toc ul { list-style: none; padding-left: 0; }
+  .toc li { padding: 4px 0; }
+  .toc a { color: #2c3e50; text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+
+  @media print {
+    body { background: #fff; margin: 0; padding: 10px; font-size: 11pt; }
+    .card, .email { box-shadow: none; border: 1px solid #ddd; page-break-inside: avoid; }
+    .month-header { background: #333; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Keller / Regh GbR — E-Mail-Dokumentation</h1>
+<p><em>Stand: 3. April 2026 &bull; 88 E-Mails (50 empfangen, 38 gesendet) &bull; Zeitraum: Oktober 2024 – April 2026</em></p>
+
+<div class="info">
+  <strong>Hinweis:</strong> Diese Dokumentation wurde aus den Original-EML-Dateien erstellt. Alle Inhalte sind wörtlich aus den E-Mails entnommen. Zeitangaben in MESZ (Sommerzeit) bzw. MEZ (Winterzeit).
+</div>
+
+<!-- ECKDATEN -->
+<div class="card">
+  <h2>Eckdaten</h2>
+  <dl class="info-grid">
+    <dt>GbR</dt><dd>Keller / Regh GbR</dd>
+    <dt>Zweck</dt><dd>Verwaltung eines Hallengebäudes</dd>
+    <dt>Objekt</dt><dd>Kiemstr. 10, 54311 Trierweiler</dd>
+    <dt>Gesellschafter 1</dt><dd><strong>Horst Keller</strong> (Vater) — gesundheitlich eingeschränkt, wiederholt im Krankenhaus</dd>
+    <dt>Gesellschafter 2</dt><dd><strong>Mary-Lou Regh</strong> (Tochter, geb. Keller) — ml.regh@yahoo.com</dd>
+    <dt>GmbH-Seite</dt><dd><strong>Christiane Keller</strong> (geb. Poss), Ehefrau von Horst Keller — Info@horst-keller-gmbh.de</dd>
+    <dt>GmbH-Adresse</dt><dd>Auf der Geig 19, 54311 Trierweiler</dd>
+    <dt>Regh-Adresse</dt><dd>Auf der Geig 8, 54311 Trierweiler</dd>
+    <dt>GbR-Steuernr.</dt><dd>042/082/31676</dd>
+    <dt>GbR-Konto</dt><dd>Sparkasse Trier</dd>
+    <dt>Steuerberater</dt><dd>KNP / Kadau</dd>
+  </dl>
+</div>
+
+<!-- BETEILIGTE -->
+<div class="card">
+  <h2>Beteiligte Dritte</h2>
+  <dl class="info-grid">
+    <dt>Sparkasse Trier</dt><dd>Herr Johannes, Herr Farsch, Herr Botzet (lukas.botzet@sk-trier.de, michael.johannes@sk-trier.de)</dd>
+    <dt>KNP / Kadau</dt><dd>Steuerberater der GbR</dd>
+    <dt>Oliver Meyer</dt><dd>Steuerberater Keller (neuer, GmbH-seitig)</dd>
+    <dt>Finanzamt Trier</dt><dd>Frau Weber (Vollstreckung X/5) — vollstr.02@fa-tr.fin-rlp.de</dd>
+    <dt>Primagas</dt><dd>Gaslieferant, Kundennr. 346836, Behälter Kiemstr. 10</dd>
+    <dt>A.R.T.</dt><dd>Abfallentsorgung</dd>
+    <dt>Fa. Weisgerber</dt><dd>Gaszähler-Installation</dd>
+    <dt>RA Zimmermann</dt><dd>Anwältin der Horst Keller GmbH</dd>
+    <dt>Kanzlei Wittschier &amp; Oberbillig</dt><dd>Von Regh erwähnt im Kontext Rechtsvertretung</dd>
+  </dl>
+</div>
+
+<!-- CHRONOLOGIE -->
+<div class="card">
+  <h2>Chronologischer E-Mail-Verkehr</h2>
+  <p>Alle E-Mails in zeitlicher Reihenfolge. <span class="email-direction dir-in">EMPFANGEN</span> = von Mary-Lou Regh, <span class="email-direction dir-out">GESENDET</span> = von Horst Keller GmbH / Christiane Keller.</p>
+</div>
+
+<!-- ==================== OKTOBER 2024 ==================== -->
+<div class="month-header" id="m2024-10">Oktober 2024</div>
+
+<div class="email empfangen">
+  <div class="email-date">02.10.2024, 16:56 MESZ <span class="email-direction dir-in">EMPFANGEN</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Mary-Lou Regh &lt;ml.regh@yahoo.com&gt;</span>
+    <span class="label">An:</span><span class="value">Info &lt;Info@horst-keller-gmbh.de&gt;</span>
+    <span class="label">Betreff:</span><span class="value">Firmenpost Schabio und Bobinets</span>
+  </div>
+  <div class="email-body">Regh beschwert sich, dass Frau Schabio und Bobinets wiederholt Unterlagen der GmbH an ihre Privatadresse geschickt haben. Sie hat die Briefe bereits an die korrekte Adresse (Auf der Geig 19, 54311 Trierweiler) zugestellt und bittet Keller, seine Mitarbeiterinnen über die richtige Firmenanschrift zu informieren.</div>
+  <div class="tonfall"><span class="badge badge-gray">sachlich/bestimmt</span></div>
+</div>
+
+<!-- ==================== DEZEMBER 2024 ==================== -->
+<div class="month-header" id="m2024-12">Dezember 2024</div>
+
+<div class="email empfangen">
+  <div class="email-date">17.12.2024, 19:50 MEZ <span class="email-direction dir-in">EMPFANGEN</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">An:</span><span class="value">Info / Horst Keller GmbH</span>
+    <span class="label">Betreff:</span><span class="value">WG: Rechnung Halle Kiemstraße</span>
+  </div>
+  <div class="email-body">Regh leitet ihre Mail an Herrn Farsch (Sparkasse) weiter, in der sie ihn bittet, die Freigabe des Betrags für die Rechnung Reparatur Hallentor (RE-202412-0696) anzuordnen.</div>
+  <div class="email-attachments">Anhänge: <span>Mail Poss Horst Keller.pdf</span> <span>Rechnung_RE-202412-0696_17.12.2024.pdf</span></div>
+  <div class="tonfall"><span class="badge badge-gray">sachlich</span></div>
+</div>
+
+<div class="email empfangen">
+  <div class="email-date">18.12.2024, 08:21 MEZ <span class="email-direction dir-in">EMPFANGEN</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">An:</span><span class="value">Info / Horst Keller GmbH</span>
+    <span class="label">Betreff:</span><span class="value">AW: Rechnung RE-202412-0696</span>
+  </div>
+  <div class="email-body">Regh hat sich telefonisch bei Herrn Johannes (Sparkasse) rückversichert, dass die Überweisung an die Horst Keller GmbH ordnungsgemäß durchgeführt wird. Herr Farsch war nicht erreichbar; Herr Johannes wird die Überweisung am Vormittag vornehmen.</div>
+  <div class="tonfall"><span class="badge badge-gray">sachlich</span></div>
+</div>
+
+<!-- ==================== JANUAR 2025 ==================== -->
+<div class="month-header" id="m2025-01">Januar 2025</div>
+
+<div class="email gesendet">
+  <div class="email-date">21.01.2025, 07:46 MEZ <span class="email-direction dir-out">GESENDET</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Christiane Keller / Horst Keller GmbH</span>
+    <span class="label">An:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">Betreff:</span><span class="value">Re: Rechnung RE-202412-0696</span>
+  </div>
+  <div class="email-body">Teilt mit, dass Bilder und Taschenbücher im Lagerbüro zur Abholung bereitstehen. Bittet Regh, sich mit der Eifelklinik Manderscheid in Verbindung zu setzen (Tel. 06572 92501).</div>
+  <div class="tonfall"><span class="badge badge-gray">sachlich</span></div>
+</div>
+
+<!-- ==================== FEBRUAR 2025 ==================== -->
+<div class="month-header" id="m2025-02">Februar 2025</div>
+
+<div class="email gesendet">
+  <div class="email-date">11.02.2025, 11:20 MEZ <span class="email-direction dir-out">GESENDET</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Christiane Keller / Horst Keller GmbH</span>
+    <span class="label">An:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">Betreff:</span><span class="value">AW: GbR-Themen</span>
+  </div>
+  <div class="email-body">Übersendung der von Regh angeforderten Unterlagen (8 PDF-Scans) bzgl. Steuerberaterwechsel, KNP-Doppelzahlung und Primagas.</div>
+  <div class="email-attachments">Anhänge: <span>scan_ML 1-8.pdf</span></div>
+  <div class="tonfall"><span class="badge badge-gray">sachlich</span></div>
+</div>
+
+<div class="email empfangen">
+  <div class="email-date">10.02.2025, 10:03 MEZ <span class="email-direction dir-in">EMPFANGEN</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">An:</span><span class="value">Info / Horst Keller GmbH</span>
+    <span class="label">Betreff:</span><span class="value">Re: GbR-Themen</span>
+  </div>
+  <div class="email-body">Stimmt Steuerberaterwechsel vorerst nicht zu (neue Kanzlei unbekannt). Bittet um Kontaktdaten. KNP-Rechnung 2631 über 596,92 € war Doppelzahlung, bereits zurücküberwiesen. Fordert, Hallenrechnungen künftig direkt an sie weiterzuleiten. Kündigt Primagasrechnung an.</div>
+  <div class="zitat">„Ich bitte darum keine Rechnungen die Halle betreffend über die Horst Keller GmbH anzuweisen, das führt nur zu einem bürokratischem Wirrwarr und Ungleichgewicht."</div>
+  <div class="tonfall"><span class="badge badge-gray">sachlich/bestimmt</span></div>
+</div>
+
+<div class="email empfangen">
+  <div class="email-date">11.02.2025, 12:26 MEZ <span class="email-direction dir-in">EMPFANGEN</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">An:</span><span class="value">Info / Horst Keller GmbH</span>
+    <span class="label">Betreff:</span><span class="value">AW: GbR-Themen</span>
+  </div>
+  <div class="email-body">Bedankt sich für die Zusendung der Unterlagen und bittet um Übermittlung der Anschrift des neuen Steuerbüros.</div>
+  <div class="tonfall"><span class="badge badge-green">freundlich</span></div>
+</div>
+
+<div class="email gesendet">
+  <div class="email-date">13.02.2025, 17:21 MEZ <span class="email-direction dir-out">GESENDET</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Christiane Keller / Horst Keller GmbH</span>
+    <span class="label">An:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">Betreff:</span><span class="value">AW: GbR-Themen</span>
+  </div>
+  <div class="email-body">Bittet Regh, die steuerliche Abwicklung der GbR bei KNP zu übernehmen oder eine Alternative vorzuschlagen.</div>
+  <div class="zitat">„Eine gemeinsame Abwicklung mit der GmbH über denselben Steuerberater möchten wir gerne vermeiden."</div>
+  <div class="tonfall"><span class="badge badge-gray">sachlich</span></div>
+</div>
+
+<div class="email empfangen">
+  <div class="email-date">27.02.2025, 09:20 MEZ <span class="email-direction dir-in">EMPFANGEN</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">An:</span><span class="value">Info / Horst Keller GmbH</span>
+    <span class="label">Betreff:</span><span class="value">Bestätigung Zahlungsavis / Dringlich</span>
+  </div>
+  <div class="email-body">Sparkasse benötigt Kellers Unterschrift für Überweisungen an Primagas und KNP. Bittet um persönliche Unterschrift und Rücksendung.</div>
+  <div class="email-attachments">Anhänge: <span>Sparkasse Trier Zahlungsanweisung.pdf</span></div>
+  <div class="tonfall"><span class="badge badge-gray">sachlich/bestimmt</span></div>
+</div>
+
+<div class="email empfangen">
+  <div class="email-date">27.02.2025, 13:26 MEZ <span class="email-direction dir-in">EMPFANGEN</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">An:</span><span class="value">Info / Horst Keller GmbH</span>
+    <span class="label">Betreff:</span><span class="value">Zeugnis</span>
+  </div>
+  <div class="email-body">Sendet vorformuliertes qualifiziertes Arbeitszeugnis zur Unterschrift durch Keller. Bittet um zeitnahe Übergabe des Originals mit Unterschrift und Firmenstempel.</div>
+  <div class="email-attachments">Anhänge: <span>Z1.pdf</span></div>
+  <div class="tonfall"><span class="badge badge-gray">sachlich</span></div>
+</div>
+
+<div class="email gesendet">
+  <div class="email-date">27.02.2025, 20:22 MEZ <span class="email-direction dir-out">GESENDET</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Christiane Keller / Horst Keller GmbH</span>
+    <span class="label">An:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">Betreff:</span><span class="value">AW: Bestätigung Zahlungsavis / Dringlich</span>
+  </div>
+  <div class="email-body">Rücksendung der unterschriebenen Zahlungsanweisung für Überweisungen an Primagas und KNP.</div>
+  <div class="email-attachments">Anhänge: <span>scan_Zahlungsanweisung.pdf</span></div>
+  <div class="tonfall"><span class="badge badge-gray">sachlich</span></div>
+</div>
+
+<div class="email empfangen">
+  <div class="email-date">28.02.2025, 07:49 MEZ <span class="email-direction dir-in">EMPFANGEN</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">An:</span><span class="value">Info / Horst Keller GmbH</span>
+    <span class="label">Betreff:</span><span class="value">AW: Primagas Rechnung</span>
+  </div>
+  <div class="email-body">Kritisiert: Primagas-Originalrechnung vom 11.12.2024 erst am 08.02.2025 weitergeleitet — rund 2 Monate Verspätung. Fordert künftig schnellere Weiterleitung.</div>
+  <div class="zitat">„die Originalrechnung stammt vom 11.12.2024. weitergeleitet wurde mir diese am 8. Februar!!! also schon mit 2 Monaten Verspätung Ihrerseits."</div>
+  <div class="tonfall"><span class="badge badge-yellow">bestimmt/vorwurfsvoll</span></div>
+</div>
+
+<div class="email empfangen">
+  <div class="email-date">28.02.2025, 14:34 MEZ <span class="email-direction dir-in">EMPFANGEN</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">An:</span><span class="value">Info / Horst Keller GmbH</span>
+    <span class="label">Betreff:</span><span class="value">Zeugnis im Word Format</span>
+  </div>
+  <div class="email-body">Sendet Zeugnisvorlage nochmals im Word-Format. Bittet um unterschriebene Vorab-Zusendung per Mail, erwartet die schriftliche Ausführung in der Folgewoche.</div>
+  <div class="email-attachments">Anhänge: <span>Z1.docx</span></div>
+  <div class="tonfall"><span class="badge badge-gray">sachlich</span></div>
+</div>
+
+<!-- ==================== MÄRZ 2025 ==================== -->
+<div class="month-header" id="m2025-03">März 2025</div>
+
+<div class="email gesendet">
+  <div class="email-date">01.03.2025, 09:48 MEZ <span class="email-direction dir-out">GESENDET</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Christiane Keller / Horst Keller GmbH</span>
+    <span class="label">An:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">Betreff:</span><span class="value">AW: Primagas Rechnung</span>
+  </div>
+  <div class="email-body">Schlägt vor, Regh solle künftig nicht über die GmbH Gas bestellen. Rechnung auf GbR umschreiben. Bittet, über alle GbR-Tätigkeiten vorher informiert zu werden.</div>
+  <div class="zitat">„Ich würde vorschlagen, dass sie in Zukunft nicht einfach über die GmbH Gas bestellen. Bitte lassen sie die Rechnung auf die GbR umschreiben."</div>
+  <div class="tonfall"><span class="badge badge-gray">bestimmt</span></div>
+</div>
+
+<div class="email empfangen">
+  <div class="email-date">01.03.2025, 10:51 MEZ <span class="email-direction dir-in">EMPFANGEN</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">An:</span><span class="value">Info / Horst Keller GmbH</span>
+    <span class="label">Betreff:</span><span class="value">AW: Primagas Rechnung</span>
+  </div>
+  <div class="email-body">Stellt klar, dass sie kein Gas bestellt hat. Da Keller bestellt habe (nachweisbar bei Primagas), solle er sich selbst um die Umschreibung kümmern.</div>
+  <div class="zitat">„Mir jetzt diesen Sachverhalt so verkaufen zu wollen, ist schon reichlich dreist."</div>
+  <div class="tonfall"><span class="badge badge-yellow">scharf</span></div>
+</div>
+
+<div class="email empfangen">
+  <div class="email-date">11.03.2025, 15:35 MEZ <span class="email-direction dir-in">EMPFANGEN</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">An:</span><span class="value">Info / Horst Keller GmbH</span>
+    <span class="label">Betreff:</span><span class="value">Erinnerung an ausstehendes Arbeitszeugnis</span>
+  </div>
+  <div class="email-body">Erinnert an Anforderung vom 28.02.2025. Zeugnis wurde bereits auf Vorschlag von RÄin Zimmermann vorformuliert und in Word zur Verfügung gestellt. Frist: 14.03.2025.</div>
+  <div class="tonfall"><span class="badge badge-gray">sachlich</span></div>
+</div>
+
+<!-- ==================== APRIL 2025 ==================== -->
+<div class="month-header" id="m2025-04">April 2025</div>
+
+<div class="email empfangen">
+  <div class="email-date">02.04.2025, 12:43 MESZ <span class="email-direction dir-in">EMPFANGEN</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">An:</span><span class="value">Info / Horst Keller GmbH</span>
+    <span class="label">Betreff:</span><span class="value">AW: Verspätete Abgabe Steuererklärung</span>
+  </div>
+  <div class="email-body">Hat Verspätungsgebühr (100 € gesamt) privat bezahlt. Bemängelt, dass nur ein Gesellschafter informiert wurde, und hat Änderung beim FA veranlasst. Bittet um Rücküberweisung des Keller-Anteils von 50 € auf ihr Volksbankkonto.</div>
+  <div class="tonfall"><span class="badge badge-gray">sachlich/bestimmt</span></div>
+</div>
+
+<div class="email empfangen">
+  <div class="email-date">07.04.2025, 13:16 MESZ <span class="email-direction dir-in">EMPFANGEN</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">An:</span><span class="value">Info / Horst Keller GmbH</span>
+    <span class="label">Betreff:</span><span class="value">WG: Zahlungserinnerung! Verspätete Abgabe Steuererklärung</span>
+  </div>
+  <div class="email-body">Erinnert an anteilige Zahlung (50 €) für Steuer GbR. Frist: morgen.</div>
+  <div class="email-attachments">Anhänge: <span>Auftragsbestätigung Echtzeit-Überweisung.pdf</span></div>
+  <div class="tonfall"><span class="badge badge-gray">bestimmt</span></div>
+</div>
+
+<!-- ==================== JUNI 2025 ==================== -->
+<div class="month-header" id="m2025-06">Juni 2025</div>
+
+<div class="email empfangen">
+  <div class="email-date">03.06.2025, 19:22 MESZ <span class="email-direction dir-in">EMPFANGEN</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">An:</span><span class="value">Info / Horst Keller GmbH</span>
+    <span class="label">Betreff:</span><span class="value">Rückzahlung EK Steuer</span>
+  </div>
+  <div class="email-body">Hat noch keine Rückmeldung erhalten. Frist: Donnerstag, 05.06.2025.</div>
+  <div class="tonfall"><span class="badge badge-gray">bestimmt</span></div>
+</div>
+
+<div class="email gesendet">
+  <div class="email-date">03.06.2025, 20:31 MESZ <span class="email-direction dir-out">GESENDET</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Christiane Keller / Horst Keller GmbH</span>
+    <span class="label">An:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">Betreff:</span><span class="value">AW: Rückzahlung EK Steuer</span>
+  </div>
+  <div class="email-body">Bestätigt, dass das Anliegen in Bearbeitung ist und geprüft wird. Rückmeldung folgt.</div>
+  <div class="tonfall"><span class="badge badge-gray">sachlich</span></div>
+</div>
+
+<div class="email empfangen">
+  <div class="email-date">03.06.2025, 21:20 MESZ <span class="email-direction dir-in">EMPFANGEN</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">An:</span><span class="value">Info / Horst Keller GmbH</span>
+    <span class="label">Betreff:</span><span class="value">AW: Rückzahlung EK Steuer</span>
+  </div>
+  <div class="email-body">Argumentiert, dass für die Rückzahlung keine Überprüfung nötig sei, da alle Unterlagen bereits weitergeleitet wurden.</div>
+  <div class="zitat">„Ich erwarte also das Anforderungsformular bis spätestens zum 05.05.25 unterzeichnet zurück."</div>
+  <div class="tonfall"><span class="badge badge-gray">bestimmt</span></div>
+</div>
+
+<div class="email gesendet">
+  <div class="email-date">05.06.2025, 19:46 MESZ <span class="email-direction dir-out">GESENDET</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Christiane Keller / Horst Keller GmbH</span>
+    <span class="label">An:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">Betreff:</span><span class="value">Rückzahlung Einkommensteuer</span>
+  </div>
+  <div class="email-body">Übersendet den unterschriebenen Bankauftrag zur Rückzahlung der Einkommensteuer.</div>
+  <div class="email-attachments">Anhänge: <span>scan_Rückzahlung Einkommensteuer M.L.Regh.pdf</span></div>
+  <div class="tonfall"><span class="badge badge-gray">sachlich</span></div>
+</div>
+
+<div class="email empfangen">
+  <div class="email-date">06.06.2025, 08:30 MESZ <span class="email-direction dir-in">EMPFANGEN</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">An:</span><span class="value">Info / Horst Keller GmbH</span>
+    <span class="label">Betreff:</span><span class="value">AW: Rückzahlung Einkommensteuer</span>
+  </div>
+  <div class="email-body">Bedankt sich für Entgegenkommen, wünscht geruhsame Pfingsten. Teilt mit, dass Anfragen zur Vermietung der Halle eingegangen sind, und schlägt Investition in Solaranlage vor.</div>
+  <div class="tonfall"><span class="badge badge-green">freundlich</span></div>
+</div>
+
+<div class="email gesendet">
+  <div class="email-date">14.06.2025, 18:25 MESZ <span class="email-direction dir-out">GESENDET</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Christiane Keller / Horst Keller GmbH</span>
+    <span class="label">An:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">Betreff:</span><span class="value">GbR Keller / Regh</span>
+  </div>
+  <div class="email-body">Hinweis auf fehlerhafte Rechnungsadressen einiger Lieferanten, Bitte um Korrektur. Bitte um Rückerstattung bereits von der GmbH geleisteter Zahlungen. Bitte um unterschriebene Zahlungsanweisung und Primagas-Vertrag.</div>
+  <div class="email-attachments">Anhänge: <span>scan_Zahlungsanweisung GbR.pdf</span> <span>scan_KNP RG.pdf</span> <span>scan_Primagas1+2.pdf</span> <span>scan_ART.pdf</span></div>
+  <div class="tonfall"><span class="badge badge-gray">sachlich</span></div>
+</div>
+
+<div class="email empfangen">
+  <div class="email-date">15.06.2025, 18:17 MESZ <span class="email-direction dir-in">EMPFANGEN</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">An:</span><span class="value">Info / Horst Keller GmbH</span>
+    <span class="label">Betreff:</span><span class="value">Re: GbR Keller / Regh</span>
+  </div>
+  <div class="email-body">Bestätigt: Zahlungsanweisung an Sparkasse gesendet, Adressänderung ART veranlasst. Primagas-Unterlagen werden vorab per Mail gesendet und morgen in den Briefkasten eingeworfen.</div>
+  <div class="email-attachments">Anhänge: <span>ART Primagas ÜW 06.25.pdf</span></div>
+  <div class="tonfall"><span class="badge badge-gray">sachlich</span></div>
+</div>
+
+<div class="email empfangen">
+  <div class="email-date">16.06.2025, 19:50 MESZ <span class="email-direction dir-in">EMPFANGEN</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">An:</span><span class="value">Info / Horst Keller GmbH</span>
+    <span class="label">Betreff:</span><span class="value">Änderungsantrag ART</span>
+  </div>
+  <div class="email-body">Sendet ART-Änderungsantrag, bittet um unterschriebene Rückgabe. Abfallgebühren werden entsprechend den Mietnebenkosten verrechnet.</div>
+  <div class="email-attachments">Anhänge: <span>ART Änderung RA 25.pdf</span></div>
+  <div class="tonfall"><span class="badge badge-gray">sachlich</span></div>
+</div>
+
+<div class="email empfangen">
+  <div class="email-date">25.06.2025, 13:25 MESZ <span class="email-direction dir-in">EMPFANGEN</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">An:</span><span class="value">Info / Horst Keller GmbH</span>
+    <span class="label">Betreff:</span><span class="value">WG: Änderungsantrag ART</span>
+  </div>
+  <div class="email-body">Erinnert an ART-Änderung vom 16.06. — Dokument wartet noch auf Rückgabe mit Unterschrift.</div>
+  <div class="tonfall"><span class="badge badge-gray">sachlich</span></div>
+</div>
+
+<div class="email gesendet">
+  <div class="email-date">25.06.2025, 16:47 MESZ <span class="email-direction dir-out">GESENDET</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Christiane Keller / Horst Keller GmbH</span>
+    <span class="label">An:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">Betreff:</span><span class="value">AW: Änderungsantrag ART</span>
+  </div>
+  <div class="email-body">Rücksendung des unterschriebenen Änderungsantrags ART.</div>
+  <div class="email-attachments">Anhänge: <span>scan_ÄnderungART.pdf</span></div>
+  <div class="tonfall"><span class="badge badge-gray">sachlich</span></div>
+</div>
+
+<div class="email gesendet">
+  <div class="email-date">28.06.2025, 16:00 MESZ <span class="email-direction dir-out">GESENDET</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Christiane Keller / Horst Keller GmbH</span>
+    <span class="label">An:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">Betreff:</span><span class="value">WG: Primagas Bestellhinweis</span>
+  </div>
+  <div class="email-body">Weiterleitung der automatischen Primagas-Bedarfsmeldung: Behälter Kiemstraße 10 geht zur Neige.</div>
+  <div class="tonfall"><span class="badge badge-gray">sachlich</span></div>
+</div>
+
+<!-- ==================== JULI 2025 ==================== -->
+<div class="month-header" id="m2025-07">Juli 2025</div>
+
+<div class="email empfangen">
+  <div class="email-date">11.07.2025, 18:09 MESZ <span class="email-direction dir-in">EMPFANGEN</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">An:</span><span class="value">Info / Horst Keller GmbH</span>
+    <span class="label">Betreff:</span><span class="value">A.R.T.</span>
+  </div>
+  <div class="email-body">Sendet A.R.T.-Halbjahresrechnung für Gebäude Kiemstr. zur Kenntnisnahme.</div>
+  <div class="email-attachments">Anhänge: <span>Halle ART 25.2.pdf</span></div>
+  <div class="tonfall"><span class="badge badge-gray">sachlich</span></div>
+</div>
+
+<div class="email gesendet">
+  <div class="email-date">17.07.2025, 16:32 MESZ <span class="email-direction dir-out">GESENDET</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Horst Keller / Horst Keller GmbH</span>
+    <span class="label">An:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">Betreff:</span><span class="value">WG: Angebot Gaszähler</span>
+  </div>
+  <div class="email-body">Horst Keller leitet Angebot der Fa. Weisgerber GmbH weiter: Installation eines separaten Gaszählers für getrennte Abrechnung der Gaskosten. Bittet um Veranlassung des Einbaus.</div>
+  <div class="email-attachments">Anhänge: <span>Angebot Keller.pdf</span></div>
+  <div class="tonfall"><span class="badge badge-gray">sachlich</span></div>
+</div>
+
+<div class="email empfangen">
+  <div class="email-date">21.07.2025, 17:49 MESZ <span class="email-direction dir-in">EMPFANGEN</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">An:</span><span class="value">Info / Horst Keller GmbH</span>
+    <span class="label">Betreff:</span><span class="value">Re: WG: Angebot Gaszähler</span>
+  </div>
+  <div class="email-body">Versteht den Zweck des separaten Gaszählers nicht ganz. Nach ihrem Kenntnisstand heizt nur Werk 1 mit Primagas, Büro hat separaten Gasheizofen. Bittet um schlüssige Erklärung vor Zustimmung.</div>
+  <div class="tonfall"><span class="badge badge-gray">sachlich</span></div>
+</div>
+
+<div class="email gesendet">
+  <div class="email-date">21.07.2025, 17:22 MESZ <span class="email-direction dir-out">GESENDET</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Christiane Keller / Horst Keller GmbH</span>
+    <span class="label">An:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">Betreff:</span><span class="value">Weiterleitung Post</span>
+  </div>
+  <div class="email-body">Weiterleitung von Post der KNP an Regh.</div>
+  <div class="email-attachments">Anhänge: <span>scan_KNP.pdf</span></div>
+  <div class="tonfall"><span class="badge badge-gray">sachlich</span></div>
+</div>
+
+<div class="email gesendet">
+  <div class="email-date">21.07.2025, 18:46 MESZ <span class="email-direction dir-out">GESENDET</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Christiane Keller / Horst Keller GmbH</span>
+    <span class="label">An:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">Betreff:</span><span class="value">AW: WG: Angebot Gaszähler</span>
+  </div>
+  <div class="email-body">Erklärt: Räume kühlen bei Nichtbenutzung aus. Eigener Zähler würde klare, nachvollziehbare Abrechnung ermöglichen und transparente Nebenkostenabrechnung nach Mietrecht sicherstellen.</div>
+  <div class="zitat">„Ein eigener Zähler würde eine klare und nachvollziehbare Abrechnung der Energiekosten ermöglichen."</div>
+  <div class="tonfall"><span class="badge badge-gray">sachlich</span></div>
+</div>
+
+<div class="email empfangen">
+  <div class="email-date">22.07.2025, 18:38 MESZ <span class="email-direction dir-in">EMPFANGEN</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">An:</span><span class="value">Info / Horst Keller GmbH</span>
+    <span class="label">Betreff:</span><span class="value">Angebot Weisgerber</span>
+  </div>
+  <div class="email-body">Sendet Angebot der Firma Weisgerber als Anhang.</div>
+  <div class="email-attachments">Anhänge: <span>Angebot Weisgerber22072025183733.pdf</span></div>
+  <div class="tonfall"><span class="badge badge-gray">sachlich</span></div>
+</div>
+
+<div class="email empfangen">
+  <div class="email-date">22.07.2025, 19:34 MESZ <span class="email-direction dir-in">EMPFANGEN</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">An:</span><span class="value">Info / Horst Keller GmbH</span>
+    <span class="label">Betreff:</span><span class="value">Toröffner</span>
+  </div>
+  <div class="email-body">Bittet Herrn Keller um einen Garagentoröffner für die Halle Kiemstr. Beim Wechsel des Tores wurde ihr keiner ausgehändigt.</div>
+  <div class="tonfall"><span class="badge badge-green">freundlich</span></div>
+</div>
+
+<div class="email empfangen">
+  <div class="email-date">29.07.2025, 10:30 MESZ <span class="email-direction dir-in">EMPFANGEN</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">An:</span><span class="value">Info / Horst Keller GmbH</span>
+    <span class="label">Betreff:</span><span class="value">WG: Toröffner</span>
+  </div>
+  <div class="email-body">Erinnert nochmals höflich an die Bereitstellung eines Toröffners.</div>
+  <div class="tonfall"><span class="badge badge-green">freundlich</span></div>
+</div>
+
+<!-- ==================== AUGUST 2025 ==================== -->
+<div class="month-header" id="m2025-08">August 2025</div>
+
+<div class="email empfangen">
+  <div class="email-date">01.08.2025, 18:04 MESZ <span class="email-direction dir-in">EMPFANGEN</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">An:</span><span class="value">Info / Horst Keller GmbH</span>
+    <span class="label">Betreff:</span><span class="value">KNP Rechnung</span>
+  </div>
+  <div class="email-body">Hat KNP-Rechnung der GbR Halle privat beglichen. Bittet Keller, seinen Anteil von 53,55 € auf ihr Volksbankkonto zu überweisen.</div>
+  <div class="email-attachments">Anhänge: <span>Screenshot Überweisung.png</span></div>
+  <div class="tonfall"><span class="badge badge-gray">sachlich</span></div>
+</div>
+
+<div class="email gesendet">
+  <div class="email-date">07.08.2025, 17:36 MESZ <span class="email-direction dir-out">GESENDET</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Christiane Keller / Horst Keller GmbH</span>
+    <span class="label">An:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">Betreff:</span><span class="value">AW: KNP Rechnung</span>
+  </div>
+  <div class="email-body">Sendet Einverständniserklärung zur Rückzahlung der von Regh privat beglichenen KNP-Rechnung (Anteil 53,55 €).</div>
+  <div class="email-attachments">Anhänge: <span>2025-08-07-RückerstattungKNP.pdf</span></div>
+  <div class="tonfall"><span class="badge badge-green">freundlich</span></div>
+</div>
+
+<div class="email empfangen">
+  <div class="email-date">07.08.2025, 17:52 MESZ <span class="email-direction dir-in">EMPFANGEN</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">An:</span><span class="value">Info / Horst Keller GmbH</span>
+    <span class="label">Betreff:</span><span class="value">AW: KNP Rechnung</span>
+  </div>
+  <div class="email-body">Fragt, ob KNP die Steuer der Halle noch für beide Gesellschafter macht. Falls ja, nur die Hälfte fällig.</div>
+  <div class="tonfall"><span class="badge badge-gray">sachlich</span></div>
+</div>
+
+<div class="email gesendet">
+  <div class="email-date">07.08.2025, 18:11 MESZ <span class="email-direction dir-out">GESENDET</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Christiane Keller / Horst Keller GmbH</span>
+    <span class="label">An:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">Betreff:</span><span class="value">AW: KNP Rechnung</span>
+  </div>
+  <div class="email-body">Steuerliche Betreuung der GbR erfolgt weiterhin über KNP. Rechnung ist an die GbR adressiert, sollte vom Geschäftskonto beglichen werden.</div>
+  <div class="zitat">„Die betreffende Rechnung ist an die GbR adressiert und sollte grundsätzlich auch vom Geschäftskonto der GbR beglichen werden."</div>
+  <div class="tonfall"><span class="badge badge-gray">sachlich</span></div>
+</div>
+
+<div class="email empfangen">
+  <div class="email-date">07.08.2025, 19:04 MESZ <span class="email-direction dir-in">EMPFANGEN</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">An:</span><span class="value">Info / Horst Keller GmbH</span>
+    <span class="label">Betreff:</span><span class="value">AW: KNP Rechnung</span>
+  </div>
+  <div class="email-body">Korrigiert: 50 % = 53,55 €, nicht 107,10 €. Stellt klar: Steuerberatungs-Rechnungen, die Eigentümer direkt betreffen, müssen privat getragen werden, nicht vom Hallenkonto.</div>
+  <div class="zitat">„Rechnungen, die die Eigentümer direkt betreffen (also Steuerberater, Einkommensteuer etc.) müssen rechtlich vom Eigentümer privat übernommen werden, nicht aus dem Hallenkonto."</div>
+  <div class="tonfall"><span class="badge badge-gray">bestimmt</span></div>
+</div>
+
+<div class="email gesendet">
+  <div class="email-date">19.08.2025, 16:47 MESZ <span class="email-direction dir-out">GESENDET</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Christiane Keller / Horst Keller GmbH</span>
+    <span class="label">An:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">Betreff:</span><span class="value">AW: KNP Rechnung</span>
+  </div>
+  <div class="email-body">Widerspricht: Buchführung und steuerliche Aufzeichnungen gem. § 33 Abs. 1 StBVV 2016 i.V.m. § 14 StBVV 2016 sind Betriebsausgaben der GbR.</div>
+  <div class="zitat">„Da es sich hierbei eindeutig um Betriebsausgaben handelt, können und sollten die Kosten direkt vom Betriebskonto der GbR beglichen werden."</div>
+  <div class="tonfall"><span class="badge badge-gray">sachlich/bestimmt</span></div>
+</div>
+
+<!-- ==================== SEPTEMBER 2025 ==================== -->
+<div class="month-header" id="m2025-09">September 2025</div>
+
+<div class="email empfangen">
+  <div class="email-date">09.09.2025, 17:57 MESZ <span class="email-direction dir-in">EMPFANGEN</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">An:</span><span class="value">Info / Horst Keller GmbH</span>
+    <span class="label">Betreff:</span><span class="value">Nachzahlung Finanzamt</span>
+  </div>
+  <div class="email-body">Fordert Freigabe einer Nachzahlung von 2.068 € aus Halleneinnahmen 2023 durch die GbR bis 12.09.2025. Widerlegt Behauptung, Keller habe keinen Zugriff auf das elektronische Sparkassen-Postfach. Fordert Klärung einer FA-Abbuchung von 8.043,68 € unter Steuernummer 042/082/31685.</div>
+  <div class="email-attachments">Anhänge: <span>Zahlungsavis FA Trier.pdf</span> <span>EK Steuer ML Regh.pdf</span> <span>Erklärung Erstattung.pdf</span> <span>FA Abbuchung unbek. Steuernummer.pdf</span></div>
+  <div class="tonfall"><span class="badge badge-gray">bestimmt</span></div>
+</div>
+
+<div class="email empfangen">
+  <div class="email-date">15.09.2025, 11:30 MESZ <span class="email-direction dir-in">EMPFANGEN</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">An:</span><span class="value">Info / Horst Keller GmbH</span>
+    <span class="label">Betreff:</span><span class="value">WG: Nachzahlung Finanzamt</span>
+  </div>
+  <div class="email-body">„Erste und letzte wohlmeinende Erinnerung" an die Mail vom 09.09.2025. Droht, Schriftstücke persönlich zu überbringen.</div>
+  <div class="zitat">„Dies ist die erste und letzte wohlmeinende Erinnerung an meine Mail vom 09.09.25! Sollte Ihre Mitarbeiterin, Frau Poss, nicht fähig sein, Ihnen Unterlagen asap zukommen zu lassen, kann ich Ihnen zu bearbeitende Schriftstücke zukünftig auch persönlich überbringen."</div>
+  <div class="tonfall"><span class="badge badge-red">scharf/bestimmt</span></div>
+</div>
+
+<div class="email gesendet">
+  <div class="email-date">16.09.2025, 08:53 MESZ <span class="email-direction dir-out">GESENDET</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Christiane Keller / Horst Keller GmbH</span>
+    <span class="label">An:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">Betreff:</span><span class="value">AW: Nachzahlung Finanzamt</span>
+  </div>
+  <div class="email-body">Antwort auf Reghs Erinnerung bzgl. Nachzahlung. Anhang beigefügt (Freigabe/Erstattungsunterlage).</div>
+  <div class="email-attachments">Anhänge: <span>scan_Erstattung M.Regh Steuer.pdf</span></div>
+  <div class="tonfall"><span class="badge badge-gray">sachlich</span></div>
+</div>
+
+<div class="email empfangen">
+  <div class="email-date">16.09.2025, 09:25 MESZ <span class="email-direction dir-in">EMPFANGEN</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">An:</span><span class="value">Info / Horst Keller GmbH</span>
+    <span class="label">Betreff:</span><span class="value">AW: Nachzahlung Finanzamt</span>
+  </div>
+  <div class="email-body">„Danke dafür." — Nachzahlung offenbar freigegeben.</div>
+  <div class="tonfall"><span class="badge badge-green">freundlich</span></div>
+</div>
+
+<div class="email gesendet">
+  <div class="email-date">27.09.2025, 08:27 MESZ <span class="email-direction dir-out">GESENDET</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Christiane Keller / Horst Keller GmbH</span>
+    <span class="label">An:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">Betreff:</span><span class="value">RE 202509084 Fa. Weisgerber</span>
+  </div>
+  <div class="email-body">Übersendung der Rechnung Fa. Weisgerber mit Vollmacht zur Überweisung.</div>
+  <div class="email-attachments">Anhänge: <span>scan_.pdf</span></div>
+  <div class="tonfall"><span class="badge badge-gray">sachlich</span></div>
+</div>
+
+<div class="email empfangen">
+  <div class="email-date">30.09.2025, 08:33 MESZ <span class="email-direction dir-in">EMPFANGEN</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">An:</span><span class="value">Info / Horst Keller GmbH</span>
+    <span class="label">Betreff:</span><span class="value">R Weißgerber</span>
+  </div>
+  <div class="email-body">Bestätigt: „Rechnung / Überweisung ist angewiesen."</div>
+  <div class="email-attachments">Anhänge: <span>S22C-6e25093008380.pdf</span></div>
+  <div class="tonfall"><span class="badge badge-gray">sachlich</span></div>
+</div>
+
+<!-- ==================== NOVEMBER 2025 ==================== -->
+<div class="month-header" id="m2025-11">November 2025</div>
+
+<div class="email empfangen">
+  <div class="email-date">13.11.2025, 08:43 MEZ <span class="email-direction dir-in">EMPFANGEN</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">An:</span><span class="value">Info / Horst Keller GmbH</span>
+    <span class="label">Betreff:</span><span class="value">Rechnung Kadau</span>
+  </div>
+  <div class="email-body">Steuerberater-Rechnung vom Oktober weder weitergeleitet noch bearbeitet. Sieht dies als Verletzung der Sorgfaltspflicht. Hat privat bezahlt, erwartet umgehende Rückerstattung.</div>
+  <div class="zitat">„Damit wurde die vereinbarte Sorgfaltspflicht im Rahmen der Verwaltung unseres Mietobjekts Kiemstr. 10 verletzt."</div>
+  <div class="email-attachments">Anhänge: <span>Rechnung vom 13.10.2025.pdf</span> <span>IMG_7327.jpeg</span></div>
+  <div class="tonfall"><span class="badge badge-gray">bestimmt</span></div>
+</div>
+
+<div class="email gesendet">
+  <div class="email-date">27.11.2025, 18:05 MEZ <span class="email-direction dir-out">GESENDET</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Christiane Keller / Horst Keller GmbH</span>
+    <span class="label">An:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">Betreff:</span><span class="value">Rechnung + Gaslieferung</span>
+  </div>
+  <div class="email-body">Übersendung einer Rechnung, die über die GbR laufen muss. Bitte um Anforderung einer Gaslieferung für die Halle.</div>
+  <div class="email-attachments">Anhänge: <span>scan_Landesjustiz.pdf</span></div>
+  <div class="tonfall"><span class="badge badge-green">freundlich</span></div>
+</div>
+
+<!-- ==================== DEZEMBER 2025 ==================== -->
+<div class="month-header" id="m2025-12">Dezember 2025</div>
+
+<div class="email empfangen">
+  <div class="email-date">02.12.2025, 18:44 MEZ <span class="email-direction dir-in">EMPFANGEN</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">An:</span><span class="value">Info / Horst Keller GmbH</span>
+    <span class="label">Betreff:</span><span class="value">Re: Rechnung + Gaslieferung</span>
+  </div>
+  <div class="email-body">Kann Rechnung nicht an Bank weiterleiten, da Unterschrift des Vaters fehlt. Rechnung vom 10.11.2025 erst am 27.11.2025 weitergeleitet. Wird privat bezahlen, erwartet Rückzahlung bis 05.12.2025. Droht mit Anwalt.</div>
+  <div class="zitat">„Sollte mir nicht wenigstens hälftig der Kosten erstattet werden, werde ich mich diesbezüglich an meine Kanzlei wenden."</div>
+  <div class="tonfall"><span class="badge badge-red">scharf/bestimmt</span></div>
+</div>
+
+<div class="email empfangen">
+  <div class="email-date">04.12.2025, 12:56 MEZ <span class="email-direction dir-in">EMPFANGEN</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">An:</span><span class="value">Info / Horst Keller GmbH</span>
+    <span class="label">Betreff:</span><span class="value">Gasbestellung</span>
+  </div>
+  <div class="email-body">Sendet Bild zur Gasbestellung zur Kenntnisnahme.</div>
+  <div class="email-attachments">Anhänge: <span>IMG_7460.jpeg</span></div>
+  <div class="tonfall"><span class="badge badge-gray">sachlich</span></div>
+</div>
+
+<div class="email empfangen">
+  <div class="email-date">05.12.2025, 13:16 MEZ <span class="email-direction dir-in">EMPFANGEN</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">An:</span><span class="value">Info / Horst Keller GmbH</span>
+    <span class="label">Betreff:</span><span class="value">WG: 346836 - Ihre Gasentnahme wurde geschlossen</span>
+  </div>
+  <div class="email-body">Leitet Primagas-Info weiter: Gastank befüllt, Armatur aus Sicherheitsgründen geschlossen. Kündigt Verrechnung an Mieter an. Erinnert an Rückzahlung der Amtsgerichtskosten.</div>
+  <div class="zitat">„Bitte denken Sie an die Rückzahlung der Kosten Amtsgericht. Diese Rechnung wurde privat von mir bezahlt."</div>
+  <div class="email-attachments">Anhänge: <span>IMG_7466.png</span> <span>Outlook-Screenshots (4x)</span></div>
+  <div class="tonfall"><span class="badge badge-gray">sachlich/bestimmt</span></div>
+</div>
+
+<div class="email gesendet">
+  <div class="email-date">06.12.2025, 09:16 MEZ <span class="email-direction dir-out">GESENDET</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Christiane Keller / Horst Keller GmbH</span>
+    <span class="label">An:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">Betreff:</span><span class="value">AW: Rechnung + Gaslieferung</span>
+  </div>
+  <div class="email-body">Weist Vorwurf der verspäteten Weiterleitung zurück: Posteingänge werden unverzüglich weitergeleitet, Verzögerung zwischen Rechnungsdatum und Zugang liegt nicht im Einflussbereich. Vollmacht lag vor — private Zahlung war nicht notwendig. Horst Keller liegt im Krankenhaus, Gesundheitszustand lässt keine Unterschriften zu. Stellt trotzdem erneute Vollmacht aus. Bittet um Verzicht auf anwaltliche Drohungen.</div>
+  <div class="zitat">„Ich bitte Sie abschließend, auf weitere anwaltliche Drohungen zu verzichten, da diese einer konstruktiven Zusammenarbeit im Sinne aller Beteiligten nicht zuträglich sind."</div>
+  <div class="email-attachments">Anhänge: <span>scan_Landesjustiz.pdf</span> <span>ErneuteVollmacht.pdf</span></div>
+  <div class="tonfall"><span class="badge badge-gray">bestimmt</span></div>
+</div>
+
+<div class="email gesendet">
+  <div class="email-date">17.12.2025, 15:13 MEZ <span class="email-direction dir-out">GESENDET</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Christiane Keller / Horst Keller GmbH</span>
+    <span class="label">An:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">Betreff:</span><span class="value">Rechnung Primagas</span>
+  </div>
+  <div class="email-body">Weiterleitung der Primagas-Rechnung zur Kenntnisnahme.</div>
+  <div class="email-attachments">Anhänge: <span>PrimaGas.pdf</span></div>
+  <div class="tonfall"><span class="badge badge-gray">sachlich</span></div>
+</div>
+
+<div class="email gesendet">
+  <div class="email-date">18.12.2025, 19:10 MEZ <span class="email-direction dir-out">GESENDET</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Christiane Keller / Horst Keller GmbH</span>
+    <span class="label">An:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">Betreff:</span><span class="value">KNP Honorarerhöhung 2026</span>
+  </div>
+  <div class="email-body">Weiterleitung der KNP-Honorarerhöhung 2026 zur Kenntnisnahme.</div>
+  <div class="email-attachments">Anhänge: <span>scan_KNP Honorarerhöhung.pdf</span></div>
+  <div class="tonfall"><span class="badge badge-gray">sachlich</span></div>
+</div>
+
+<!-- ==================== JANUAR 2026 ==================== -->
+<div class="month-header" id="m2026-01">Januar 2026</div>
+
+<div class="email gesendet">
+  <div class="email-date">02.01.2026, 12:05 MEZ <span class="email-direction dir-out">GESENDET</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Christiane Keller / Horst Keller GmbH</span>
+    <span class="label">An:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">Betreff:</span><span class="value">Feuerstättenbescheide und Rechnungen — Kiemstr. 10</span>
+  </div>
+  <div class="email-body">Übersendung der Feuerstättenbescheide und Schornsteinfeger-Rechnungen mit Bitte um Zahlung über das GbR-Konto.</div>
+  <div class="email-attachments">Anhänge: <span>scan_Feuerstättenbescheid Gebäudereinigung.pdf</span> <span>scan_Feuerstättenbescheid Werk1.pdf</span></div>
+  <div class="tonfall"><span class="badge badge-gray">sachlich</span></div>
+</div>
+
+<div class="email empfangen">
+  <div class="email-date">08.01.2026, 06:15 MEZ <span class="email-direction dir-in">EMPFANGEN</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">An:</span><span class="value">Info / Horst Keller GmbH</span>
+    <span class="label">Betreff:</span><span class="value">AW: Rechnung Primagas</span>
+  </div>
+  <div class="email-body">Kann Primagas-Rechnung mangels Vollmacht nicht anweisen. Bittet um Mitteilung des Gasverbrauchs zur Kostenaufteilung.</div>
+  <div class="tonfall"><span class="badge badge-gray">sachlich</span></div>
+</div>
+
+<div class="email gesendet">
+  <div class="email-date">08.01.2026, 07:52 MEZ <span class="email-direction dir-out">GESENDET</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Christiane Keller / Horst Keller GmbH</span>
+    <span class="label">An:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">Betreff:</span><span class="value">Rechnung Schornsteinfeger</span>
+  </div>
+  <div class="email-body">Teilt mit, dass bei beiden Feuerstättenprüfungen Vollmachten ausgefertigt und beigefügt wurden. Bietet erneute Zusendung an. Gasverbrauch wird zeitnah mitgeteilt.</div>
+  <div class="tonfall"><span class="badge badge-green">freundlich</span></div>
+</div>
+
+<div class="email empfangen">
+  <div class="email-date">08.01.2026, 08:08 MEZ <span class="email-direction dir-in">EMPFANGEN</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">An:</span><span class="value">Info / Horst Keller GmbH</span>
+    <span class="label">Betreff:</span><span class="value">AW: Rechnung Schornsteinfeger</span>
+  </div>
+  <div class="email-body">Primagas-Rechnung hatte keine Vollmacht beigelegt. Fordert umgehende Nachreichung.</div>
+  <div class="tonfall"><span class="badge badge-gray">bestimmt</span></div>
+</div>
+
+<div class="email gesendet">
+  <div class="email-date">08.01.2026, 08:19 MEZ <span class="email-direction dir-out">GESENDET</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Christiane Keller / Horst Keller GmbH</span>
+    <span class="label">An:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">Betreff:</span><span class="value">AW: Rechnung Schornsteinfeger</span>
+  </div>
+  <div class="email-body">Teilt mit: Primagas-Betrag wurde per SEPA-Mandat (34683601) zum 18.12.2025 vom Hallenkonto abgebucht. Vollmacht daher hinfällig.</div>
+  <div class="zitat">„Somit ist eine Vollmacht hinfällig."</div>
+  <div class="tonfall"><span class="badge badge-gray">sachlich</span></div>
+</div>
+
+<div class="email gesendet">
+  <div class="email-date">14.01.2026, 07:48 MEZ <span class="email-direction dir-out">GESENDET</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Christiane Keller / Horst Keller GmbH</span>
+    <span class="label">An:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">Betreff:</span><span class="value">Gasverbrauch</span>
+  </div>
+  <div class="email-body">Mitteilung des Gasverbrauchs laut Zähler: 00074.</div>
+  <div class="tonfall"><span class="badge badge-gray">sachlich</span></div>
+</div>
+
+<!-- ==================== FEBRUAR 2026 ==================== -->
+<div class="month-header" id="m2026-02">Februar 2026</div>
+
+<div class="email empfangen">
+  <div class="email-date">18.02.2026, 10:13 MEZ <span class="email-direction dir-in">EMPFANGEN</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">An:</span><span class="value">Info / Horst Keller GmbH</span>
+    <span class="label">Betreff:</span><span class="value">WG: Primagas Bestellhinweis</span>
+  </div>
+  <div class="email-body">Leitet Primagas-Bedarfsmeldung weiter (Behälter Kiemstr. 10 geht zur Neige). Bittet Keller, aktuellen Gasverbrauch und Zählerstand abzufotografieren. Verbrauch erscheint ihr zu hoch. Umlagen werden angekündigt.</div>
+  <div class="tonfall"><span class="badge badge-gray">sachlich</span></div>
+</div>
+
+<div class="email gesendet">
+  <div class="email-date">27.02.2026, 17:55 MEZ <span class="email-direction dir-out">GESENDET</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Christiane Keller / Horst Keller GmbH</span>
+    <span class="label">An:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">Betreff:</span><span class="value">AW: Primagas Bestellhinweis</span>
+  </div>
+  <div class="email-body">Sendet angeforderte Flüssiggasabrechnung.</div>
+  <div class="email-attachments">Anhänge: <span>Fluessiggas_Abrechnung.pdf</span></div>
+  <div class="tonfall"><span class="badge badge-green">freundlich</span></div>
+</div>
+
+<!-- ==================== MÄRZ 2026 ==================== -->
+<div class="month-header" id="m2026-03">März 2026</div>
+
+<div class="email gesendet">
+  <div class="email-date">20.03.2026, 12:42 MEZ <span class="email-direction dir-out">GESENDET</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Christiane Keller / Horst Keller GmbH</span>
+    <span class="label">An:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">Betreff:</span><span class="value">Übersendung der Umsatzsteuerunterlagen</span>
+  </div>
+  <div class="email-body">Übersendung vollständiger USt-Unterlagen. Ausdrückliche Bitte, Säumniszuschläge künftig zu vermeiden.</div>
+  <div class="zitat">„Da wir auf die Durchführung der entsprechenden Tätigkeiten keinen Einfluss haben, sind wir leider nicht in der Lage, die daraus resultierenden Mehrkosten weiterhin zu tragen."</div>
+  <div class="email-attachments">Anhänge: <span>UnnötigeMahnungRegh.pdf</span> <span>scan_PrimaGas.pdf</span></div>
+  <div class="tonfall"><span class="badge badge-gray">bestimmt</span></div>
+</div>
+
+<div class="email empfangen">
+  <div class="email-date">26.03.2026, 10:44 MEZ <span class="email-direction dir-in">EMPFANGEN</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Keller / Regh GbR (via Lexware)</span>
+    <span class="label">An:</span><span class="value">Info / Horst Keller GmbH</span>
+    <span class="label">Betreff:</span><span class="value">Rechnung RE202603-0002 von Keller / Regh GbR</span>
+  </div>
+  <div class="email-body">Automatisierter Rechnungsversand über Lexware: Rechnung RE202603-0002 vom 26.03.2026 mit Flüssiggas-Abrechnung.</div>
+  <div class="email-attachments">Anhänge: <span>Rechnung_RE202603-0002_26.03.2026.pdf</span> <span>Fluessiggas_Abrechnung-2.26.pdf</span></div>
+  <div class="tonfall"><span class="badge badge-gray">sachlich</span></div>
+</div>
+
+<div class="email empfangen">
+  <div class="email-date">26.03.2026, 11:19 MEZ <span class="email-direction dir-in">EMPFANGEN</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">An:</span><span class="value">Info / Horst Keller GmbH</span>
+    <span class="label">Betreff:</span><span class="value">Re: Übersendung der Umsatzsteuerunterlagen</span>
+  </div>
+  <div class="email-body">Zum Säumniszuschlag: War unklaren Abbuchungen geschuldet. Stellt klar: Kellers privat erwirtschaftete Vermietungsumsätze (Steuernr. 042/082/32685) dürfen nicht mehr vom Hallenkonto (042/082/31676) abgebucht werden. Lastschrift für Hallen-Steuernr. kann nun wieder erteilt werden. Zum Flüssiggas: Da Frage keine Beachtung fand, betrachtet sie erneute Bestellung als hinfällig.</div>
+  <div class="zitat">„Bitte haben Sie Verständnis dafür, dass Ihre privat erwirtschafteten Umsätze aus der Vermietung von Büro- und Lagerfläche in Ihrem Privatwohnsitz, und die daraus resultierende Umsatz- und Einkommenssteuer nicht mehr vom Hallenkonto abgebucht werden können."</div>
+  <div class="tonfall"><span class="badge badge-gray">sachlich/bestimmt</span></div>
+</div>
+
+<div class="email gesendet">
+  <div class="email-date">27.03.2026, 17:30 MEZ <span class="email-direction dir-out">GESENDET</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Christiane Keller / Horst Keller GmbH</span>
+    <span class="label">An:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">Betreff:</span><span class="value">AW: Übersendung der Umsatzsteuerunterlagen</span>
+  </div>
+  <div class="email-body">Bestätigt: USt-Angelegenheit und Zuordnung der Abbuchungen geklärt. Nimmt zur Kenntnis, dass private Vermietungsumsätze nicht mehr über Hallenkonto laufen. Kein Einwand gegen Gasbestellung. SEPA-Lastschriftmandat wird zeitnah zugesandt.</div>
+  <div class="zitat">„Ich habe zur Kenntnis genommen, dass die privat erwirtschafteten Umsätze aus der Vermietung von Büro- und Lagerflächen sowie die daraus resultierenden steuerlichen Verpflichtungen künftig nicht mehr über das Hallenkonto abgewickelt werden können."</div>
+  <div class="tonfall"><span class="badge badge-gray">sachlich/freundlich</span></div>
+</div>
+
+<div class="email gesendet">
+  <div class="email-date">30.03.2026, 16:59 MESZ <span class="email-direction dir-out">GESENDET</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Christiane Keller / Horst Keller GmbH</span>
+    <span class="label">An:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">Betreff:</span><span class="value">Vollstreckungsankündigung Finanzamt Trier – dringender Handlungsbedarf</span>
+  </div>
+  <div class="email-body">Vollstreckungsankündigung vom FA Trier erhalten, erneut Säumniszuschläge. Fragt: Warum ist KNP nicht tätig geworden? Bittet, künftige Post direkt an Reghs Adresse (Auf der Geig 8) umleiten zu lassen.</div>
+  <div class="zitat">„Da es bei der Zustellung an die Kiemstraße immer wieder zu Verzögerungen kommt (dies ist auch nicht die Adresse der GbR) und uns Schreiben erst verspätet erreichen, bitten wir Sie, die künftige Post direkt an Ihre Adresse (Auf der Geig 8) umleiten zu lassen."</div>
+  <div class="email-attachments">Anhänge: <span>scan_1-4.pdf</span></div>
+  <div class="tonfall"><span class="badge badge-gray">bestimmt</span></div>
+</div>
+
+<div class="email empfangen">
+  <div class="email-date">30.03.2026, 18:38 MESZ <span class="email-direction dir-in">EMPFANGEN</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">An:</span><span class="value">Info / Horst Keller GmbH</span>
+    <span class="label">Betreff:</span><span class="value">WG: Anweisung Steuer Halle</span>
+  </div>
+  <div class="email-body">Bezeichnet die Situation als „sehr unschön". KNP habe das Verfahren bereits umgestellt, Sparkasse agiere zu langsam. Will sich beim FA melden.</div>
+  <div class="zitat">„In diesem Zusammenhang wäre es allerdings hilfreich gewesen, Sie hätten mir zeitnah die Lastschriftunterlagen zukommen lassen…"</div>
+  <div class="email-attachments">Anhänge: <span>UST. Halle 4VJ.25.pdf</span></div>
+  <div class="tonfall"><span class="badge badge-yellow">bestimmt/vorwurfsvoll</span></div>
+</div>
+
+<div class="email empfangen">
+  <div class="email-date">30.03.2026, 19:51 MESZ <span class="email-direction dir-in">EMPFANGEN</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">An:</span><span class="value">Sparkasse Trier (Botzet, Johannes)</span>
+    <span class="label">CC:</span><span class="value">Info / Horst Keller GmbH</span>
+    <span class="label">Betreff:</span><span class="value">Dringlich!!!</span>
+  </div>
+  <div class="email-body">An die Sparkasse: Überweisung wurde in der Vorwoche per E-Mail angefordert, aber nicht ausgeführt. Inzwischen Vollstreckungsbescheid. Droht mit Verantwortungsweitergabe.</div>
+  <div class="zitat">„Sollten uns hieraus Nachteile, insbesondere gegenüber dem Finanzamt, entstehen, behalten wir uns vor, die Verantwortung hierfür entsprechend weiterzugeben."</div>
+  <div class="email-attachments">Anhänge: <span>scan_1.pdf</span></div>
+  <div class="tonfall"><span class="badge badge-red">scharf/drohend</span></div>
+</div>
+
+<div class="email empfangen">
+  <div class="email-date">31.03.2026, 08:43 MESZ <span class="email-direction dir-in">EMPFANGEN</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">An:</span><span class="value">Info / Horst Keller GmbH</span>
+    <span class="label">Betreff:</span><span class="value">AW: Vollstreckungsankündigung FA Trier</span>
+  </div>
+  <div class="email-body">Teilt mit: „Das Geld ist angewiesen." Fordert Lastschriftformular im Original, Einwurf in Briefkasten noch am selben Tag.</div>
+  <div class="zitat">„Ich benötige das Lastschriftformular im Original und bitte um Einwurf in meinen Briefkasten heute!"</div>
+  <div class="tonfall"><span class="badge badge-gray">bestimmt</span></div>
+</div>
+
+<div class="email empfangen">
+  <div class="email-date">31.03.2026, 16:17 MESZ <span class="email-direction dir-in">EMPFANGEN</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">An:</span><span class="value">Info / Horst Keller GmbH</span>
+    <span class="label">Betreff:</span><span class="value">Zahlungsavis</span>
+  </div>
+  <div class="email-body">Sendet Überweisungsbeleg zur Kenntnisnahme.</div>
+  <div class="email-attachments">Anhänge: <span>ÜW 31032026.pdf</span></div>
+  <div class="tonfall"><span class="badge badge-gray">sachlich</span></div>
+</div>
+
+<div class="email empfangen">
+  <div class="email-date">31.03.2026, 20:40 MESZ <span class="email-direction dir-in">EMPFANGEN</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">An:</span><span class="value">Info / Horst Keller GmbH</span>
+    <span class="label">Betreff:</span><span class="value">Verzögerte Weiterleitung wichtiger Korrespondenz</span>
+  </div>
+  <div class="email-body">Ausführliche Beschwerde: FA-Schreiben vom 26.02.2026 erst am 20.03.2026 weitergeleitet (ca. 20 Tage Verzögerung). Vollstreckungsbescheid vom 18.03.2026 ca. 10 Tage. Frau Poss habe allein den Briefkastenschlüssel. Fordert Stellungnahme oder Zweitschlüssel.</div>
+  <div class="zitat">„Zwischen dem Datum des Schreibens des Finanzamtes und dessen Weiterleitung liegen – selbst bei großzügig kalkulierten zwei Tagen Postlaufzeit – rund 20 Tage."</div>
+  <div class="tonfall"><span class="badge badge-gray">bestimmt/sachlich</span></div>
+</div>
+
+<!-- ==================== APRIL 2026 ==================== -->
+<div class="month-header" id="m2026-04">April 2026</div>
+
+<div class="email gesendet">
+  <div class="email-date">01.04.2026, 16:21 MESZ <span class="email-direction dir-out">GESENDET</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Christiane Keller / Horst Keller GmbH</span>
+    <span class="label">An:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">Betreff:</span><span class="value">AW: Verzögerte Weiterleitung wichtiger Korrespondenz</span>
+  </div>
+  <div class="email-body">Geht davon aus, dass die Mail an sie (Frau Keller) gerichtet war. Verweist darauf, dass Post nicht an den Mieter gesendet werden soll.</div>
+  <div class="zitat">„Wie bereits in der letzten Mail geschrieben, sollte die Post nicht an den Mieter gesendet werden."</div>
+  <div class="tonfall"><span class="badge badge-gray">sachlich</span></div>
+</div>
+
+<div class="danger" style="margin: 20px 0; padding: 16px 20px;">
+  <strong>⚠ Folgende E-Mail markiert eine deutliche Eskalation — persönliche Angriffe gegen Christiane Keller</strong>
+</div>
+
+<div class="email empfangen" style="border-left-color: #721c24; border-left-width: 6px;">
+  <div class="email-date">01.04.2026, 19:59 MESZ <span class="email-direction dir-in">EMPFANGEN</span> <span class="badge badge-red">persönlicher Angriff</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Mary-Lou Regh &lt;ml.regh@yahoo.com&gt;</span>
+    <span class="label">An:</span><span class="value">Info &lt;Info@horst-keller-gmbh.de&gt;</span>
+    <span class="label">Betreff:</span><span class="value">Re: AW: Verzögerte Weiterleitung wichtiger Korrespondenz</span>
+  </div>
+  <div class="email-body" style="background: #fff5f5; border: 1px solid #f8d7da;">Frau Poss,
+
+lassen Sie mich vorweg eines klarstellen: Sie können Ihren neuen Nachnamen noch so oft hervorheben – fett, kursiv oder in beliebigen Schriftzeichen –, Sie werden ihm nicht gerecht werden. Die einzige Frau, die diesen Namen mit Würde getragen hat, war meine Mutter. Umso befremdlicher war es, Sie ausgerechnet auf ihrer Trauerfeier zu sehen, wo Sie sich zu aufgesetzten Gefühlsbekundungen hinreißen ließen.
+
+Ich möchte Sie daher bitten, uns künftig mit Ihrer Selbstinszenierung und Arroganz zu verschonen.
+
+Da Sie gleichzeitig großen Wert auf formale Korrektheit legen, stellt sich mir die Frage, weshalb das Schreiben bezüglich der Lastschrift – welches im Original mit zwei gültigen Unterschriften beim Finanzamt vorliegen muss – noch immer nicht bei mir eingegangen ist. Benötigen Sie Unterstützung, um die Adresse (Geig 8) zu finden, oder gibt es andere Gründe für die Verzögerung? Alternativ bin ich gerne bereit, das Schreiben persönlich bei Ihnen abzuholen.
+
+Ihre Verzögerungstaktik führt zu keinerlei Ergebnis. Ursprünglich war es mein Anliegen, der GbR weitere Unannehmlichkeiten und unnötige Kosten zu ersparen – ein Punkt, auf den Sie selbst hingewiesen haben. Sollte sich Ihr Vorgehen jedoch nicht ändern, sehe ich keinen Anlass mehr, dieses Entgegenkommen aufrechtzuerhalten.
+
+Mit entsprechender Konsequenz
+
+M. Regh</div>
+  <div class="tonfall"><span class="badge badge-red">beleidigend/scharf</span></div>
+</div>
+
+<div class="email empfangen">
+  <div class="email-date">02.04.2026, 10:43 MESZ <span class="email-direction dir-in">EMPFANGEN</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">An:</span><span class="value">Info / Horst Keller GmbH</span>
+    <span class="label">Betreff:</span><span class="value">WG: Info I 2742 / 082 / 31676 — Keller und Regh</span>
+  </div>
+  <div class="email-body">Leitet E-Mail des Finanzamts Trier weiter: Zahlung über 818,31 € am 31.03.2026 beim FA eingegangen. Konto bereinigt, Einspruch erledigt.</div>
+  <div class="zitat">„DAS nennt man zeitnahe Reaktion."</div>
+  <div class="tonfall"><span class="badge badge-yellow">ironisch/spitz</span></div>
+</div>
+
+<div class="email empfangen">
+  <div class="email-date">02.04.2026, 10:44 MESZ <span class="email-direction dir-in">EMPFANGEN</span></div>
+  <div class="email-header">
+    <span class="label">Von:</span><span class="value">Mary-Lou Regh</span>
+    <span class="label">An:</span><span class="value">Info / Horst Keller GmbH</span>
+    <span class="label">Betreff:</span><span class="value">AW: WG: Info I 2742 / 082 / 31676 — Keller und Regh</span>
+  </div>
+  <div class="email-body">Bedankt sich bei Frau Weber (FA Trier) für die Nachricht und wünscht schöne Feiertage.</div>
+  <div class="tonfall"><span class="badge badge-green">freundlich</span></div>
+</div>
+
+<!-- ANALYSE -->
+<div class="card" style="margin-top: 40px;">
+  <h2>Zusammenfassende Analyse</h2>
+
+  <h3>Wiederkehrende Konfliktthemen</h3>
+  <ol>
+    <li><strong>Verzögerte Postweiterleitung:</strong> Reghs Hauptvorwurf. Primagas-Rechnung 2 Monate, FA-Schreiben 20 Tage, Vollstreckungsbescheid ca. 10 Tage. Keller-Seite verweist auf Postlaufzeiten und eingeschränkten Einfluss.</li>
+    <li><strong>Private Vorauszahlungen + Rückforderungen:</strong> Regh zahlt wiederholt aus eigenen Mitteln und setzt kurze Fristen für Rückerstattung (50 €, 53,55 €, Amtsgerichtskosten, KNP, Verspätungsgebühr).</li>
+    <li><strong>Unterschriften und Vollmachten:</strong> Regh verlangt Originalunterschriften von Horst Keller, der im Krankenhaus liegt. Keller-Seite verweist auf bestehende Vollmachten.</li>
+    <li><strong>Säumniszuschläge / Vollstreckung FA:</strong> Beide Seiten schieben sich die Schuld für Verzögerungen beim Finanzamt zu.</li>
+    <li><strong>Steuerberater (KNP):</strong> Getrennte vs. gemeinsame Abwicklung, Kostenaufteilung zwischen GbR und privat.</li>
+    <li><strong>Gasversorgung (Primagas):</strong> Bestellungen, Zählerstände, Kostenaufteilung, Gaszähler-Installation.</li>
+    <li><strong>Arbeitszeugnis:</strong> Regh fordert qualifiziertes Arbeitszeugnis von der GmbH, Vorformulierung durch RÄin Zimmermann. Kein Ergebnis in den E-Mails sichtbar.</li>
+  </ol>
+
+  <h3>Tonfall-Entwicklung Mary-Lou Regh</h3>
+  <table style="width:100%; border-collapse: collapse; margin: 12px 0;">
+    <tr style="background: #ecf0f1;"><th style="padding: 8px; text-align: left;">Zeitraum</th><th style="padding: 8px; text-align: left;">Tonfall</th><th style="padding: 8px; text-align: left;">Beispiel</th></tr>
+    <tr><td style="padding: 8px; border-bottom: 1px solid #eee;">Okt 2024 – Jun 2025</td><td style="padding: 8px; border-bottom: 1px solid #eee;">Sachlich-bestimmt, überwiegend korrekt</td><td style="padding: 8px; border-bottom: 1px solid #eee;">Kurze Fristen, aber formell</td></tr>
+    <tr><td style="padding: 8px; border-bottom: 1px solid #eee;">Sep – Nov 2025</td><td style="padding: 8px; border-bottom: 1px solid #eee;">Zunehmend ungeduldig, erste Drohungen</td><td style="padding: 8px; border-bottom: 1px solid #eee;">„erste und letzte wohlmeinende Erinnerung", „Saumseligkeit", Anwaltsdrohung</td></tr>
+    <tr><td style="padding: 8px; border-bottom: 1px solid #eee;">Dez 2025 – Mär 2026</td><td style="padding: 8px; border-bottom: 1px solid #eee;">Verschärft, vorwurfsvoll, drohend</td><td style="padding: 8px; border-bottom: 1px solid #eee;">„reichlich dreist", Kanzlei-Drohung, „Dringlich!!!"</td></tr>
+    <tr style="background: #f8d7da;"><td style="padding: 8px; border-bottom: 1px solid #eee;"><strong>01.04.2026</strong></td><td style="padding: 8px; border-bottom: 1px solid #eee;"><strong>Offen beleidigend, persönlich</strong></td><td style="padding: 8px; border-bottom: 1px solid #eee;">Angriff auf Nachnamen, Trauerfeier, „Selbstinszenierung und Arroganz"</td></tr>
+  </table>
+
+  <h3>Tonfall Christiane Keller / Horst Keller GmbH</h3>
+  <p>Durchgehend <strong>sachlich und professionell</strong>. Erklärt Sachverhalte, verweist auf Vollmachten, bittet um freundlichen Umgang und Verzicht auf Anwaltsdrohungen. Versucht mehrfach zu deeskalieren.</p>
+</div>
+
+<!-- STATUS -->
+<div class="card">
+  <h2>Aktueller Stand (03.04.2026)</h2>
+  <div class="success">
+    <strong>Erledigt:</strong> Vollstreckung FA Trier — Zahlung 818,31 € eingegangen, Konto bereinigt, Einspruch erledigt (bestätigt durch FA am 02.04.2026).
+  </div>
+  <div class="success">
+    <strong>Erledigt:</strong> SEPA-Lastschriftmandat — wurde am Freitag 28.03.2026 (laut Andreas) versendet und ist bei Regh eingegangen.
+  </div>
+  <div class="warn">
+    <strong>Offen:</strong> Auf die persönlich beleidigende E-Mail vom 01.04.2026 wurde bisher nicht geantwortet. <strong>Empfehlung: Nicht antworten.</strong> Sachliche Themen sind erledigt. Jede Reaktion auf die persönlichen Angriffe gibt Material für weitere Eskalation.
+  </div>
+</div>
+
+<p style="text-align: center; color: #aaa; font-size: 0.85em; margin-top: 40px;">
+  Erstellt am 3. April 2026 &bull; Alle Angaben basieren auf den Original-EML-Dateien &bull; Keine Inhalte hinzugefügt oder verändert
+</p>
+
+</body>
+</html>

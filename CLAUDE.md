@@ -2,7 +2,11 @@
 
 ## Kontext
 
-Andreas hat ein Thema rund um die Keller GbR, das er dokumentieren und aufarbeiten möchte. Dieses Verzeichnis dient als strukturierte Ablage dafür.
+Die Keller/Regh GbR verwaltet ein Hallengebäude (Kiemstr. 10, 54311 Trierweiler). Gesellschafter sind Horst Keller (Vater, gesundheitlich eingeschränkt) und seine Tochter Mary-Lou Regh. Beide sind zerstritten. Christiane Keller (geb. Poss), Horst Kellers Ehefrau, führt die Horst Keller GmbH und kommuniziert für die GmbH-Seite per E-Mail (info@horst-keller-gmbh.de).
+
+Mary-Lou Regh hat früher in der GmbH gearbeitet, hat den Betrieb laut Andreas heruntergewirtschaftet und ist dann ausgeschieden. Christiane baut seit ca. 2 Jahren systematisch wieder auf.
+
+Andreas dokumentiert den gesamten Vorgang, um den Überblick über den E-Mail-Verkehr und die Konflikte zu behalten.
 
 ## Vorgehensweise
 
