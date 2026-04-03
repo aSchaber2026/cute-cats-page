@@ -2,8 +2,264 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Analyse Pensionsrückstellung – Horst Keller Gebäudereinigung GmbH</title>
 <style>
+  /* === Base === */
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    max-width: 920px;
+    margin: 40px auto;
+    padding: 20px;
+    color: #333;
+    line-height: 1.7;
+    background: #f0f2f5;
+  }
+
+  /* === Navigation === */
+  .nav-bar {
+    margin-bottom: 24px;
+  }
+  .nav-bar a {
+    color: #2c3e50;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95em;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    transition: box-shadow 0.2s, background 0.2s;
+  }
+  .nav-bar a:hover {
+    background: #ecf0f1;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  }
+
+  /* === Header === */
+  .page-header {
+    background: #2c3e50;
+    color: #fff;
+    padding: 28px 32px;
+    border-radius: 12px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  }
+  .page-header h1 {
+    margin: 0 0 6px 0;
+    font-size: 1.6em;
+    font-weight: 700;
+    color: #fff;
+    border: none;
+    padding: 0;
+  }
+  .page-header .subtitle {
+    font-size: 0.95em;
+    color: #bdc3c7;
+    margin: 0;
+  }
+
+  /* === Headings === */
+  h2 {
+    color: #2c3e50;
+    margin-top: 36px;
+    border-bottom: 2px solid #bdc3c7;
+    padding-bottom: 6px;
+    font-size: 1.3em;
+  }
+  h3 {
+    color: #34495e;
+    margin-top: 24px;
+    font-size: 1.1em;
+  }
+  h4 {
+    color: #34495e;
+    margin-top: 18px;
+    font-size: 1em;
+  }
+
+  /* === Cards === */
+  .card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 24px 28px;
+    margin: 16px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  .card h2 {
+    margin-top: 0;
+  }
+  .card h3:first-child {
+    margin-top: 0;
+  }
+
+  /* === Info Grid (Eckdaten) === */
+  .info-grid {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 6px 16px;
+  }
+  .info-grid dt {
+    font-weight: 600;
+    color: #34495e;
+  }
+  .info-grid dd {
+    margin: 0;
+  }
+
+  /* === Tables === */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  th {
+    background: #2c3e50;
+    color: white;
+    padding: 10px 14px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.93em;
+  }
+  td {
+    padding: 10px 14px;
+    border-bottom: 1px solid #ecf0f1;
+    font-size: 0.95em;
+  }
+  tr:nth-child(even) { background: #f8f9fa; }
+  tr:hover { background: #eef2f7; transition: background 0.15s; }
+
+  /* === Highlight Boxes === */
+  .highlight-box {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 14px 18px;
+    margin: 16px 0;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  }
+  .danger-box {
+    background: #f8d7da;
+    border-left: 4px solid #dc3545;
+    padding: 14px 18px;
+    margin: 16px 0;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  }
+  .success-box {
+    background: #d4edda;
+    border-left: 4px solid #28a745;
+    padding: 14px 18px;
+    margin: 16px 0;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  }
+  .info-box {
+    background: #d1ecf1;
+    border-left: 4px solid #17a2b8;
+    padding: 14px 18px;
+    margin: 16px 0;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  }
+
+  /* === Badges === */
+  .badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.85em;
+    font-weight: 600;
+  }
+  .badge-red { background: #f8d7da; color: #721c24; }
+  .badge-green { background: #d4edda; color: #155724; }
+  .badge-yellow { background: #fff3cd; color: #664d03; }
+  .badge-blue { background: #d6eaf8; color: #1a5276; }
+
+  /* === Lists === */
+  ul, ol { padding-left: 22px; }
+  li { margin: 6px 0; }
+
+  /* === Links === */
+  a { color: #2c3e50; }
+
+  strong { color: #2c3e50; }
+
+  /* === Footer === */
+  .footer {
+    margin-top: 40px;
+    padding: 20px 28px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    font-size: 0.9em;
+    color: #7f8c8d;
+  }
+  .footer p { margin: 4px 0; }
+
+  /* === Page Break (Print) === */
+  .page-break { page-break-before: always; }
+
+  /* === Responsive === */
+  @media (max-width: 640px) {
+    body { margin: 16px auto; padding: 12px; }
+    .page-header { padding: 20px; }
+    .page-header h1 { font-size: 1.25em; }
+    .card { padding: 16px 18px; }
+    .info-grid { grid-template-columns: 1fr; gap: 2px 0; }
+    .info-grid dt { margin-top: 8px; }
+    table { font-size: 0.88em; }
+    th, td { padding: 8px 10px; }
+  }
+
+  /* === Print === */
+  @media print {
+    body {
+      background: #fff;
+      margin: 0;
+      padding: 10px;
+      font-size: 11pt;
+      color: #1a1a1a;
+      max-width: 100%;
+    }
+    .nav-bar { display: none; }
+    .page-header {
+      background: #fff;
+      color: #1a1a1a;
+      box-shadow: none;
+      border-bottom: 3px solid #2c3e50;
+      border-radius: 0;
+      padding: 10px 0 12px 0;
+    }
+    .page-header h1 { color: #1a1a1a; }
+    .page-header .subtitle { color: #555; }
+    .card {
+      box-shadow: none;
+      border: 1px solid #ddd;
+      page-break-inside: avoid;
+      border-radius: 4px;
+    }
+    .highlight-box, .danger-box, .success-box, .info-box {
+      box-shadow: none;
+      page-break-inside: avoid;
+    }
+    table { page-break-inside: avoid; }
+    th { background: #333; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    tr:hover { background: inherit; }
+    .footer {
+      box-shadow: none;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    h2, h3 { page-break-after: avoid; }
+    .page-break { page-break-before: always; }
+    strong { color: #1a1a1a; }
+  }
   @page {
     margin: 2cm 1.5cm 2.5cm 1.5cm;
     size: A4;
@@ -11,127 +267,48 @@
       content: "Analyse Pensionsrückstellung & Unternehmensbewertung – Horst Keller Gebäudereinigung GmbH";
       font-size: 7.5pt;
       color: #999;
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
     }
     @bottom-center {
       content: "Seite " counter(page) " von " counter(pages);
       font-size: 8pt;
       color: #999;
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
     }
   }
   @page :first {
     @top-center { content: none; }
   }
-  body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 11pt;
-    line-height: 1.6;
-    color: #1a1a1a;
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0;
-  }
-  h1 {
-    font-size: 18pt;
-    color: #003366;
-    border-bottom: 3px solid #003366;
-    padding-bottom: 10px;
-    margin-top: 0;
-  }
-  h2 {
-    font-size: 14pt;
-    color: #003366;
-    margin-top: 30px;
-    border-bottom: 1px solid #cccccc;
-    padding-bottom: 5px;
-  }
-  h3 {
-    font-size: 12pt;
-    color: #444;
-    margin-top: 20px;
-  }
-  .header-info {
-    background: #f0f4f8;
-    padding: 15px 20px;
-    border-radius: 5px;
-    margin: 20px 0;
-  }
-  .header-info p {
-    margin: 4px 0;
-  }
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 15px 0;
-  }
-  th {
-    background: #003366;
-    color: white;
-    padding: 8px 12px;
-    text-align: left;
-    font-weight: 600;
-  }
-  td {
-    padding: 8px 12px;
-    border-bottom: 1px solid #ddd;
-  }
-  tr:nth-child(even) { background: #f8f9fa; }
-  .highlight-box {
-    background: #fff3cd;
-    border-left: 4px solid #ffc107;
-    padding: 12px 16px;
-    margin: 15px 0;
-    border-radius: 0 5px 5px 0;
-  }
-  .danger-box {
-    background: #f8d7da;
-    border-left: 4px solid #dc3545;
-    padding: 12px 16px;
-    margin: 15px 0;
-    border-radius: 0 5px 5px 0;
-  }
-  .success-box {
-    background: #d4edda;
-    border-left: 4px solid #28a745;
-    padding: 12px 16px;
-    margin: 15px 0;
-    border-radius: 0 5px 5px 0;
-  }
-  .info-box {
-    background: #d1ecf1;
-    border-left: 4px solid #17a2b8;
-    padding: 12px 16px;
-    margin: 15px 0;
-    border-radius: 0 5px 5px 0;
-  }
-  ul { padding-left: 20px; }
-  li { margin: 5px 0; }
-  .footer {
-    margin-top: 40px;
-    padding-top: 15px;
-    border-top: 1px solid #ccc;
-    font-size: 9pt;
-    color: #888;
-  }
-  .page-break { page-break-before: always; }
-  strong { color: #003366; }
 </style>
 </head>
 <body>
 
-<h1>Analyse: Pensionsrückstellung &amp; Unternehmensbewertung<br>Horst Keller Gebäudereinigung GmbH</h1>
+<!-- Navigation -->
+<div class="nav-bar">
+  <a href="portal.html">&#8592; Zurück zum Portal</a>
+</div>
 
-<div class="header-info">
-  <p><strong>Firma:</strong> Horst Keller Gebäudereinigung GmbH, Trierweiler</p>
-  <p><strong>Versorgungsberechtigter:</strong> Horst Keller, geb. 07.09.1940 (aktuell 85 Jahre)</p>
-  <p><strong>Ehefrau:</strong> ca. 60 Jahre alt (25 Jahre jünger)</p>
-  <p><strong>Grundlage:</strong> Gutachten von Wolfgang Utzig, Aktuar DAV, Stand 31.12.2022</p>
-  <p><strong>Auftraggeber des Gutachtens:</strong> KNP Steuerberatungsgesellschaft mbH &amp; Co. KG, Ensdorf</p>
-  <p><strong>Analyse erstellt:</strong> 27.03.2026</p>
+<!-- Header -->
+<div class="page-header">
+  <h1>Analyse: Pensionsrückstellung &amp; Unternehmensbewertung</h1>
+  <p class="subtitle">Horst Keller Gebäudereinigung GmbH — Stand: 27.03.2026</p>
+</div>
+
+<!-- Eckdaten -->
+<div class="card">
+  <h2>Eckdaten</h2>
+  <dl class="info-grid">
+    <dt>Firma</dt><dd>Horst Keller Gebäudereinigung GmbH, Trierweiler</dd>
+    <dt>Versorgungsberechtigter</dt><dd>Horst Keller, geb. 07.09.1940 (aktuell 85 Jahre)</dd>
+    <dt>Ehefrau</dt><dd>ca. 60 Jahre alt (25 Jahre jünger)</dd>
+    <dt>Grundlage</dt><dd>Gutachten von Wolfgang Utzig, Aktuar DAV, Stand 31.12.2022</dd>
+    <dt>Auftraggeber des Gutachtens</dt><dd>KNP Steuerberatungsgesellschaft mbH &amp; Co. KG, Ensdorf</dd>
+    <dt>Analyse erstellt</dt><dd>27.03.2026</dd>
+  </dl>
 </div>
 
 <!-- ============================================================ -->
+<div class="card">
 <h2>1. Ausgangssituation</h2>
 
 <p>Herr Horst Keller erhält seit Dezember 2003 eine lebenslange betriebliche Altersrente in Höhe von <strong>1.303,80 EUR monatlich</strong> (15.645,60 EUR/Jahr). Die Auszahlung erfolgt über die Lohnabrechnung.</p>
@@ -141,8 +318,10 @@
 <div class="danger-box">
   <strong>Kernproblem:</strong> Es ist unklar, ob die zugehörige Pensionsrückstellung in den bisherigen Bilanzen korrekt gebucht wurde. Durch den Steuerberaterwechsel (weg von KNP) und die lückenhafte Unterlagenübergabe bestehen erhebliche Informationslücken.
 </div>
+</div>
 
 <!-- ============================================================ -->
+<div class="card">
 <h2>2. Was ist eine Pensionsrückstellung?</h2>
 
 <p>Die Pensionsrückstellung bildet den <strong>Barwert aller zukünftigen Rentenzahlungen</strong> ab – also alles, was die GmbH ab heute bis zum Lebensende von Herrn Keller und danach an seine Witwe noch zahlen muss.</p>
@@ -156,8 +335,10 @@
 </table>
 
 <p>Beides muss in der Bilanz abgebildet sein – die laufende Zahlung als Aufwand, die Rückstellung als Verpflichtung.</p>
+</div>
 
 <!-- ============================================================ -->
+<div class="card">
 <h2>3. Werte laut Gutachten (Stand 31.12.2022)</h2>
 
 <table>
@@ -168,8 +349,10 @@
 </table>
 
 <p>Der Unterschiedsbetrag zwischen Handels- und Erfüllungsbetrag beträgt <strong>3.286 EUR</strong> und unterliegt einer Ausschüttungssperre (§ 253 Abs. 6 HGB).</p>
+</div>
 
 <!-- ============================================================ -->
+<div class="card">
 <h2>4. Besonderheit: Ehefrau 25 Jahre jünger</h2>
 
 <div class="highlight-box">
@@ -185,9 +368,11 @@
 </table>
 
 <p>Die <strong>Witwenrente macht mehr als zwei Drittel</strong> der gesamten Verpflichtung aus. Dies bedeutet, dass die Rückstellung über die Jahre nur langsam sinkt, da die Witwenkomponente kaum abnimmt.</p>
+</div>
 
 <!-- ============================================================ -->
 <div class="page-break"></div>
+<div class="card">
 <h2>5. Geschätzte Werte Stand 31.12.2025</h2>
 
 <p>Auf Basis des Gutachtens 2022, fortgeschrieben um 3 Jahre (Herr Keller dann 85 Jahre, Ehefrau ~60 Jahre). Berücksichtigt: höheres Alter, veränderte Handelsbilanz-Zinssätze, Witwenkomponente.</p>
@@ -202,8 +387,10 @@
 <div class="info-box">
   <strong>Hinweis:</strong> Dies sind Näherungswerte ohne Zugang zu den Heubeck-Richttafeln 2018 G. Für bilanzielle Zwecke und steuerliche Anerkennung ist ein aktuelles Gutachten eines zugelassenen Aktuars zwingend erforderlich.
 </div>
+</div>
 
 <!-- ============================================================ -->
+<div class="card">
 <h2>6. Steuerliche Auswirkungen</h2>
 
 <h3>Wenn die Rückstellung nie gebucht wurde</h3>
@@ -213,8 +400,10 @@
 
 <h3>Wenn die Rückstellung gebucht war</h3>
 <p>Dann ist alles korrekt und es fehlt nur das Gutachten-Dokument im Ordner (Unterlagenlücke durch die KNP).</p>
+</div>
 
 <!-- ============================================================ -->
+<div class="card">
 <h2>7. Szenarien für die Zukunft</h2>
 
 <h3>Szenario A: GmbH läuft weiter (1–2 Jahre), dann Abwicklung</h3>
@@ -272,9 +461,11 @@
   <tr><td>Herr Keller verzichtet auf die Rente</td><td>Steuerlich: verdeckte Einlage, Lohnsteuer auf ~140.000 EUR ohne Geldzufluss</td></tr>
   <tr><td>Rückstellung weiter ignorieren</td><td>Bilanz falsch, mögliche Insolvenzverschleppung</td></tr>
 </table>
+</div>
 
 <!-- ============================================================ -->
 <div class="page-break"></div>
+<div class="card">
 <h2>8. Unternehmensbewertung – Verkauf der GmbH</h2>
 
 <p>Sollte ein Verkauf in Betracht kommen, ist die Ermittlung des Firmenwertes entscheidend. Bei einer Gebäudereinigung gibt es mehrere gängige Bewertungsmethoden:</p>
@@ -365,8 +556,10 @@
   <li><strong>Mitarbeiterstruktur dokumentieren</strong> → Qualifikationen, Betriebszugehörigkeit</li>
   <li><strong>Unabhängige Bewertung</strong> durch Steuerberater oder Unternehmensbewerter</li>
 </ol>
+</div>
 
 <!-- ============================================================ -->
+<div class="card">
 <h2>9. PSVaG – Pensions-Sicherungs-Verein</h2>
 
 <p>Jede GmbH mit Pensionszusage <strong>muss</strong> Mitglied im PSVaG sein. Die Beiträge (ca. 2–4 Promille der Rückstellung, also ca. 300–600 EUR/Jahr) werden normalerweise über den Steuerberater gemeldet und abgeführt.</p>
@@ -384,9 +577,11 @@
 </ul>
 
 <p>Falls nicht gemeldet: Nachmeldung ist möglich. Beitragsnachzahlung für ca. 20 Jahre: geschätzt <strong>6.000 – 10.000 EUR</strong>. Diese Kosten könnten als Schadensersatz gegen die KNP geltend gemacht werden.</p>
+</div>
 
 <!-- ============================================================ -->
 <div class="page-break"></div>
+<div class="card">
 <h2>10. Absicherung der Unternehmensführung – Handlungsbedarf Geschäftsführung</h2>
 
 <p>Aktuell ist Herr Horst Keller als alleiniger Geschäftsführer der GmbH im Handelsregister eingetragen. Seine Ehefrau führt den operativen Betrieb faktisch eigenständig und hat den Geschäftsbetrieb in den letzten zwei Jahren erfolgreich stabilisiert. Es besteht eine notarielle Generalvollmacht.</p>
@@ -465,8 +660,10 @@
 </ul>
 
 <p>Falls der Gesellschaftsvertrag keine klaren Regelungen enthält, sollte er <strong>jetzt</strong> angepasst werden – solange Herr Keller als alleiniger Gesellschafter dies noch eigenständig tun kann. Auch das ist eine Maßnahme, die nur Herr Keller selbst veranlassen kann und die später nicht mehr möglich ist.</p>
+</div>
 
 <!-- ============================================================ -->
+<div class="card">
 <h2>11. Möglicher Schadensersatz gegen die KNP</h2>
 
 <p>Falls sich herausstellt, dass die KNP:</p>
@@ -478,27 +675,30 @@
 <p>dann handelt es sich um eine <strong>Pflichtverletzung aus dem Steuerberatervertrag</strong>. Die GmbH hätte Anspruch auf Schadensersatz für die daraus entstandenen Nachteile (zu viel gezahlte Steuern, Nachzahlungen, etc.).</p>
 
 <p>Unabhängig davon ist die KNP nach <strong>§ 66 StBerG</strong> zur vollständigen Herausgabe aller Handakten verpflichtet. Bei Verweigerung: Steuerberaterkammer einschalten, ggf. Klage auf Herausgabe.</p>
+</div>
 
 <!-- ============================================================ -->
+<div class="card">
 <h2>12. Empfohlene nächste Schritte</h2>
 
 <table>
   <tr><th>Nr.</th><th>Maßnahme</th><th>Priorität</th></tr>
-  <tr><td>1</td><td><strong>Ehefrau als Geschäftsführerin im Handelsregister eintragen lassen</strong></td><td>Sofort – höchste Priorität</td></tr>
-  <tr><td>2</td><td>Gesellschaftsvertrag prüfen und ggf. anpassen (Erbfolge, Nachfolgeklausel)</td><td>Sofort</td></tr>
-  <tr><td>3</td><td>PSVaG-Mitgliedschaft prüfen (Anruf genügt)</td><td>Sofort</td></tr>
-  <tr><td>4</td><td>Aktuelles Pensionsgutachten beauftragen (Stand 31.12.2025)</td><td>Sofort</td></tr>
-  <tr><td>5</td><td>Bisherige Bilanzen prüfen: War Rückstellung gebucht?</td><td>Kurzfristig</td></tr>
-  <tr><td>6</td><td>KNP zur Herausgabe aller Unterlagen auffordern (schriftlich mit Frist)</td><td>Kurzfristig</td></tr>
-  <tr><td>7</td><td>Monatliche Rücklage aufbauen (~4.000–4.600 EUR/Monat)</td><td>Laufend</td></tr>
-  <tr><td>8</td><td>Steuerberater: Schadensersatz gegen KNP prüfen</td><td>Mittelfristig</td></tr>
-  <tr><td>9</td><td>Abfindungsvereinbarung vorbereiten (inkl. Ehefrau)</td><td>Wenn Zielkapital erreicht</td></tr>
-  <tr><td>10</td><td>Bei Verkaufsoption: Kundenliste und bereinigte Jahresabschlüsse aufbereiten</td><td>Parallel</td></tr>
-  <tr><td>11</td><td>Unabhängige Unternehmensbewertung beauftragen</td><td>Vor Verkaufsverhandlungen</td></tr>
+  <tr><td>1</td><td><strong>Ehefrau als Geschäftsführerin im Handelsregister eintragen lassen</strong></td><td><span class="badge badge-red">Sofort – höchste Priorität</span></td></tr>
+  <tr><td>2</td><td>Gesellschaftsvertrag prüfen und ggf. anpassen (Erbfolge, Nachfolgeklausel)</td><td><span class="badge badge-red">Sofort</span></td></tr>
+  <tr><td>3</td><td>PSVaG-Mitgliedschaft prüfen (Anruf genügt)</td><td><span class="badge badge-red">Sofort</span></td></tr>
+  <tr><td>4</td><td>Aktuelles Pensionsgutachten beauftragen (Stand 31.12.2025)</td><td><span class="badge badge-red">Sofort</span></td></tr>
+  <tr><td>5</td><td>Bisherige Bilanzen prüfen: War Rückstellung gebucht?</td><td><span class="badge badge-yellow">Kurzfristig</span></td></tr>
+  <tr><td>6</td><td>KNP zur Herausgabe aller Unterlagen auffordern (schriftlich mit Frist)</td><td><span class="badge badge-yellow">Kurzfristig</span></td></tr>
+  <tr><td>7</td><td>Monatliche Rücklage aufbauen (~4.000–4.600 EUR/Monat)</td><td><span class="badge badge-blue">Laufend</span></td></tr>
+  <tr><td>8</td><td>Steuerberater: Schadensersatz gegen KNP prüfen</td><td><span class="badge badge-blue">Mittelfristig</span></td></tr>
+  <tr><td>9</td><td>Abfindungsvereinbarung vorbereiten (inkl. Ehefrau)</td><td><span class="badge badge-green">Wenn Zielkapital erreicht</span></td></tr>
+  <tr><td>10</td><td>Bei Verkaufsoption: Kundenliste und bereinigte Jahresabschlüsse aufbereiten</td><td><span class="badge badge-blue">Parallel</span></td></tr>
+  <tr><td>11</td><td>Unabhängige Unternehmensbewertung beauftragen</td><td><span class="badge badge-blue">Vor Verkaufsverhandlungen</span></td></tr>
 </table>
+</div>
 
 <!-- ============================================================ -->
-
+<div class="card">
 <h2>Exkurs: Geschäftsführerin — Rechte, Pflichten und Haftung</h2>
 
 <p><em>Stand: 03.04.2026 — Hintergrund: Christiane Keller führt die GmbH faktisch seit ca. 2 Jahren. Horst Keller ist alleiniger Gesellschafter und alleiniger Geschäftsführer, jedoch gesundheitlich eingeschränkt und wiederholt im Krankenhaus. Christiane handelt derzeit auf Basis einer Vollmacht.</em></p>
@@ -511,7 +711,7 @@
   <tr><td>Faktische Leitung</td><td>Christiane Keller (geb. Poss)</td><td>Nur Vollmacht, kein offizieller Titel</td></tr>
 </table>
 
-<div class="highlight" style="background: #fff3cd; border-left: 4px solid #ffc107; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+<div class="highlight-box">
   <strong>Problem:</strong> Christiane trägt die volle Verantwortung im Tagesgeschäft, hat aber formal keine Position. Bei längerem Ausfall von Horst Keller steht die GmbH ohne handlungsfähigen Geschäftsführer da.
 </div>
 
@@ -545,7 +745,7 @@
   <li><strong>Beweislastumkehr:</strong> Im Streitfall muss der GF beweisen, dass er/sie sorgfältig gehandelt hat (nicht umgekehrt!)</li>
 </ul>
 
-<div class="highlight" style="background: #d4edda; border-left: 4px solid #28a745; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+<div class="success-box">
   <strong>Einschätzung:</strong> Die Eintragung als GF wäre sinnvoll, weil Christiane die Arbeit bereits macht — nur ohne den Schutz und die Befugnisse einer offiziellen Position. Als GF hätte sie klare Handlungsfähigkeit und Horst bleibt als alleiniger Gesellschafter in der Kontrolle.
 </div>
 
@@ -559,12 +759,13 @@
   <tr><td>5</td><td>D&amp;O-Versicherung prüfen (Haftpflicht für Geschäftsführer)</td><td>Versicherungsberater</td></tr>
 </table>
 
-<div class="highlight" style="background: #f8d7da; border-left: 4px solid #dc3545; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+<div class="danger-box">
   <strong>Wichtig:</strong> Dies ist keine Rechtsberatung. Die konkreten Schritte sollten mit einem Fachanwalt für Gesellschaftsrecht und dem Steuerberater abgestimmt werden.
+</div>
 </div>
 
 <!-- ============================================================ -->
-
+<div class="card">
 <h2>Strategische Option: Asset Deal — Neustart ohne Altlasten</h2>
 
 <p><em>Stand: 03.04.2026 — Szenario: Christiane Keller gründet eine neue Firma und kauft der GmbH die betriebsnotwendigen Vermögenswerte ab. Die alte GmbH wird anschließend geordnet abgewickelt.</em></p>
@@ -583,22 +784,22 @@
 
 <h3>Vorteile gegenüber „tot laufen lassen"</h3>
 
-<div class="highlight" style="background: #d4edda; border-left: 4px solid #28a745; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+<div class="success-box">
   <strong>1. Geld fließt in die GmbH</strong><br>
   Die GmbH erhält einen Kaufpreis → kann damit Pensionsrückstellung, Verbindlichkeiten und Steuern bedienen. Kein Vorwurf der Aushöhlung oder Untreue — es ist ein legales Geschäft.
 </div>
 
-<div class="highlight" style="background: #d4edda; border-left: 4px solid #28a745; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+<div class="success-box">
   <strong>2. Geordnete Abwicklung statt Insolvenz</strong><br>
   Wenn genug Geld reinkommt, kann die GmbH sauber liquidiert werden. Horst als GF gerät nicht in die Insolvenzantragspflicht. Deutlich weniger Stress, Kosten und Risiko.
 </div>
 
-<div class="highlight" style="background: #d4edda; border-left: 4px solid #28a745; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+<div class="success-box">
   <strong>3. Christiane startet sauber</strong><br>
   Sie ist legitime Eigentümerin aller Geräte und Verträge. Kein Gerede, kein Rechtsstreit. Kunden werden offiziell übergeben, nicht abgeworben.
 </div>
 
-<div class="highlight" style="background: #d4edda; border-left: 4px solid #28a745; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+<div class="success-box">
   <strong>4. Steuerlich interessant</strong><br>
   Die GmbH versteuert den Veräußerungsgewinn (KSt ~15 % + GewSt). Christiane kann die gekauften Geräte in der neuen Firma abschreiben — das mindert ihre Steuerlast über Jahre.
 </div>
@@ -643,12 +844,13 @@
   <tr><td>9</td><td>GmbH wird liquidiert (Gesellschafterbeschluss, Sperrjahr, Löschung)</td><td>Notar / Steuerberater</td></tr>
 </table>
 
-<div class="highlight" style="background: #d1ecf1; border-left: 4px solid #17a2b8; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+<div class="info-box">
   <strong>Fazit:</strong> Der Asset Deal ist die sauberste Lösung — legal, transparent, nachvollziehbar. Geld fließt in die GmbH statt dass sie leer ausgeht. Kein Insolvenzrisiko wenn der Preis stimmt. Christiane startet ohne Altlasten. Horst kann die GmbH geordnet abwickeln. <strong>Das Ganze steht und fällt mit einer fairen Bewertung.</strong> Ein Steuerberater + Fachanwalt sollten das begleiten.
 </div>
 
-<div class="highlight" style="background: #f8d7da; border-left: 4px solid #dc3545; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+<div class="danger-box">
   <strong>Wichtig:</strong> Dies ist keine Rechtsberatung. Vor Umsetzung unbedingt Fachanwalt für Gesellschaftsrecht und Steuerberater einschalten. Erstberatung kostet ca. 200 € und kann teure Fehler vermeiden.
+</div>
 </div>
 
 <!-- ============================================================ -->
