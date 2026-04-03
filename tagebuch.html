@@ -49,16 +49,112 @@
   .toc a { color: #2c3e50; text-decoration: none; }
   .toc a:hover { text-decoration: underline; }
 
+  /* ===== Kapitel-Navigation (Sidebar) ===== */
+  #toc-nav {
+    position: fixed; top: 0; left: 0; width: 220px; height: 100vh;
+    overflow-y: auto; background: #2c3e50; color: #ecf0f1;
+    padding: 16px 0; z-index: 1000; font-size: 0.82em;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.15);
+    scrollbar-width: thin; scrollbar-color: #4a6278 #2c3e50;
+  }
+  #toc-nav::-webkit-scrollbar { width: 5px; }
+  #toc-nav::-webkit-scrollbar-thumb { background: #4a6278; border-radius: 3px; }
+  #toc-nav .toc-title {
+    font-weight: 700; font-size: 1.05em; padding: 0 16px 10px;
+    border-bottom: 1px solid #3d566e; margin-bottom: 6px;
+  }
+  #toc-nav ul { list-style: none; margin: 0; padding: 0; }
+  #toc-nav li { margin: 0; }
+  #toc-nav a {
+    display: block; padding: 5px 16px; color: #bdc3c7;
+    text-decoration: none; border-left: 3px solid transparent;
+    transition: background 0.15s, color 0.15s, border-color 0.15s;
+  }
+  #toc-nav a:hover { background: #34495e; color: #fff; }
+  #toc-nav a.active {
+    background: #1a252f; color: #fff; font-weight: 600;
+    border-left-color: #3498db;
+  }
+  #toc-nav .toc-section-label {
+    padding: 8px 16px 3px; font-size: 0.78em; text-transform: uppercase;
+    color: #7f8c8d; letter-spacing: 0.5px; font-weight: 600;
+  }
+
+  /* Hauptinhalt nach rechts verschieben */
+  body { margin-left: 240px; }
+
+  /* Hamburger-Button (nur mobil sichtbar) */
+  #toc-toggle {
+    display: none; position: fixed; top: 10px; left: 10px;
+    z-index: 1100; background: #2c3e50; color: #fff; border: none;
+    border-radius: 6px; width: 40px; height: 40px; font-size: 1.4em;
+    cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    line-height: 40px; text-align: center; padding: 0;
+  }
+  #toc-toggle:hover { background: #34495e; }
+
+  /* Overlay hinter Menü (mobil) */
+  #toc-overlay {
+    display: none; position: fixed; top: 0; left: 0;
+    width: 100vw; height: 100vh; background: rgba(0,0,0,0.4);
+    z-index: 999;
+  }
+
+  @media (max-width: 860px) {
+    body { margin-left: 0; }
+    #toc-toggle { display: block; }
+    #toc-nav {
+      transform: translateX(-100%);
+      transition: transform 0.25s ease;
+    }
+    #toc-nav.open { transform: translateX(0); }
+    #toc-overlay.open { display: block; }
+  }
+
   @media print {
-    body { background: #fff; margin: 0; padding: 10px; font-size: 11pt; }
+    body { background: #fff; margin: 0; padding: 10px; font-size: 11pt; margin-left: 0; }
     .card, .email { box-shadow: none; border: 1px solid #ddd; page-break-inside: avoid; }
     .month-header { background: #333; }
+    #toc-nav, #toc-toggle, #toc-overlay { display: none !important; }
   }
 </style>
 </head>
 <body>
 
-<h1>Keller / Regh GbR — E-Mail-Dokumentation</h1>
+<!-- Kapitel-Navigation -->
+<button id="toc-toggle" aria-label="Inhaltsverzeichnis">&#9776;</button>
+<div id="toc-overlay"></div>
+<nav id="toc-nav">
+  <div class="toc-title">Inhaltsverzeichnis</div>
+  <ul>
+    <li class="toc-section-label">Allgemein</li>
+    <li><a href="#top">Einleitung</a></li>
+    <li><a href="#eckdaten">Eckdaten</a></li>
+    <li><a href="#beteiligte">Beteiligte Dritte</a></li>
+    <li class="toc-section-label">E-Mail-Chronologie</li>
+    <li><a href="#m2024-10">Oktober 2024</a></li>
+    <li><a href="#m2024-12">Dezember 2024</a></li>
+    <li><a href="#m2025-01">Januar 2025</a></li>
+    <li><a href="#m2025-02">Februar 2025</a></li>
+    <li><a href="#m2025-03">M&auml;rz 2025</a></li>
+    <li><a href="#m2025-04">April 2025</a></li>
+    <li><a href="#m2025-06">Juni 2025</a></li>
+    <li><a href="#m2025-07">Juli 2025</a></li>
+    <li><a href="#m2025-08">August 2025</a></li>
+    <li><a href="#m2025-09">September 2025</a></li>
+    <li><a href="#m2025-11">November 2025</a></li>
+    <li><a href="#m2025-12">Dezember 2025</a></li>
+    <li><a href="#m2026-01">Januar 2026</a></li>
+    <li><a href="#m2026-02">Februar 2026</a></li>
+    <li><a href="#m2026-03">M&auml;rz 2026</a></li>
+    <li><a href="#m2026-04">April 2026</a></li>
+    <li class="toc-section-label">Analyse</li>
+    <li><a href="#analyse">Zusammenfassende Analyse</a></li>
+    <li><a href="#status">Aktueller Stand</a></li>
+  </ul>
+</nav>
+
+<h1 id="top">Keller / Regh GbR — E-Mail-Dokumentation</h1>
 <p><em>Stand: 3. April 2026 &bull; 88 E-Mails (50 empfangen, 38 gesendet) &bull; Zeitraum: Oktober 2024 – April 2026</em></p>
 
 <div class="info">
@@ -67,7 +163,7 @@
 
 <!-- ECKDATEN -->
 <div class="card">
-  <h2>Eckdaten</h2>
+  <h2 id="eckdaten">Eckdaten</h2>
   <dl class="info-grid">
     <dt>GbR</dt><dd>Keller / Regh GbR</dd>
     <dt>Zweck</dt><dd>Verwaltung eines Hallengebäudes</dd>
@@ -85,7 +181,7 @@
 
 <!-- BETEILIGTE -->
 <div class="card">
-  <h2>Beteiligte Dritte</h2>
+  <h2 id="beteiligte">Beteiligte Dritte</h2>
   <dl class="info-grid">
     <dt>Sparkasse Trier</dt><dd>Herr Johannes, Herr Farsch, Herr Botzet (lukas.botzet@sk-trier.de, michael.johannes@sk-trier.de)</dd>
     <dt>KNP / Kadau</dt><dd>Steuerberater der GbR</dd>
@@ -1152,7 +1248,7 @@ Christiane Keller</div>
 
 <!-- ANALYSE -->
 <div class="card" style="margin-top: 40px;">
-  <h2>Zusammenfassende Analyse</h2>
+  <h2 id="analyse">Zusammenfassende Analyse</h2>
 
   <h3>Wiederkehrende Konfliktthemen</h3>
   <ol>
@@ -1180,7 +1276,7 @@ Christiane Keller</div>
 
 <!-- STATUS -->
 <div class="card">
-  <h2>Aktueller Stand (03.04.2026)</h2>
+  <h2 id="status">Aktueller Stand (03.04.2026)</h2>
   <div class="success">
     <strong>Erledigt:</strong> Vollstreckung FA Trier — Zahlung 818,31 € eingegangen, Konto bereinigt, Einspruch erledigt (bestätigt durch FA am 02.04.2026).
   </div>
@@ -1196,5 +1292,67 @@ Christiane Keller</div>
   Erstellt am 3. April 2026 &bull; Alle Angaben basieren auf den Original-EML-Dateien &bull; Keine Inhalte hinzugefügt oder verändert
 </p>
 
+<script>
+(function() {
+  // Mobile toggle
+  var toggle = document.getElementById('toc-toggle');
+  var nav = document.getElementById('toc-nav');
+  var overlay = document.getElementById('toc-overlay');
+
+  function openNav() { nav.classList.add('open'); overlay.classList.add('open'); }
+  function closeNav() { nav.classList.remove('open'); overlay.classList.remove('open'); }
+
+  toggle.addEventListener('click', function() {
+    nav.classList.contains('open') ? closeNav() : openNav();
+  });
+  overlay.addEventListener('click', closeNav);
+
+  // Close menu on link click (mobile)
+  nav.querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('click', function() {
+      if (window.innerWidth <= 860) closeNav();
+    });
+  });
+
+  // Scroll Spy
+  var links = nav.querySelectorAll('a[href^="#"]');
+  var sections = [];
+  links.forEach(function(link) {
+    var id = link.getAttribute('href').substring(1);
+    var el = document.getElementById(id);
+    if (el) sections.push({ id: id, el: el, link: link });
+  });
+
+  function onScroll() {
+    var scrollY = window.scrollY || window.pageYOffset;
+    var offset = 80;
+    var current = null;
+    for (var i = 0; i < sections.length; i++) {
+      if (sections[i].el.getBoundingClientRect().top + scrollY - offset <= scrollY) {
+        current = sections[i];
+      }
+    }
+    links.forEach(function(l) { l.classList.remove('active'); });
+    if (current) {
+      current.link.classList.add('active');
+      // Scroll the nav to keep active link visible
+      var navRect = nav.getBoundingClientRect();
+      var linkRect = current.link.getBoundingClientRect();
+      if (linkRect.top < navRect.top + 50 || linkRect.bottom > navRect.bottom - 20) {
+        current.link.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+      }
+    }
+  }
+
+  var ticking = false;
+  window.addEventListener('scroll', function() {
+    if (!ticking) {
+      window.requestAnimationFrame(function() { onScroll(); ticking = false; });
+      ticking = true;
+    }
+  });
+  onScroll();
+})();
+</script>
 </body>
 </html>
