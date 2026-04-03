@@ -1,0 +1,4 @@
+_Temp/
+*.png
+*.eml
+.playwright-mcp/
